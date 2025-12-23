@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Yuvinalis Excursions | Dubai's Premier Luxury Travel Concierge</title>
+    <meta name="description"
+        content="Curators of bespoke Dubai experiences. Private desert safaris, luxury yacht charters, and exclusive city tours for the discerning traveler." />
+    <meta name="keywords"
+        content="Dubai Luxury Travel, VIP Desert Safari, Yacht Charter Dubai, Private City Tours, Bespoke Travel Concierge" />
+    <link rel="canonical" href="https://yuvinalis.com" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yuvinalis.com/" />
+    <meta property="og:title" content="Yuvinalis Excursions | Dubai's Premier Luxury Travel Concierge" />
+    <meta property="og:description"
+        content="Curators of bespoke Dubai experiences. Private desert safaris, luxury yacht charters, and exclusive city tours." />
+    <meta property="og:image" content="https://yuvinalis.com/images/hero-new.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yuvinalis.com/" />
+    <meta property="twitter:title" content="Yuvinalis Excursions | Dubai's Premier Luxury Travel Concierge" />
+    <meta property="twitter:description"
+        content="Curators of bespoke Dubai experiences. Private desert safaris, luxury yacht charters, and exclusive city tours." />
+    <meta property="twitter:image" content="https://yuvinalis.com/images/hero-new.jpg" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Yuvinalis Excursions",
+      "image": "https://yuvinalis.com/images/hero-new.jpg",
+      "description": "Dubai's premier luxury travel concierge offering bespoke itineraries and VIP experiences.",
+      "priceRange": "$$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      },
+      "telephone": "+971551234567"
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-sans text-brand-blue bg-brand-cream antialiased overflow-x-hidden">
+    <div id="app">
+
+        <!-- Navigation -->
+        <nav
+            class="fixed top-0 w-full z-50 transition-all duration-300 p-6 md:p-8 flex justify-between items-center mix-blend-normal text-white bg-gradient-to-b from-black/50 to-transparent">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="/logo.jpg" alt="Yuvinalis Logo"
+                    class="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-300 object-cover" />
+                <span
+                    class="font-serif text-xl tracking-widest uppercase text-white drop-shadow-md hidden md:block">Yuvinalis</span>
+            </a>
+            <button class="md:hidden text-white">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+            <ul class="hidden md:flex gap-12 text-sm tracking-widest uppercase font-bold text-white drop-shadow-md">
+                <li><a href="#destinations" class="hover:text-brand-gold transition duration-300 relative group">
+                        Destinations
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                    </a></li>
+                <li><a href="#experiences" class="hover:text-brand-gold transition duration-300 relative group">
+                        Experiences
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                    </a></li>
+                <li><a href="#about" class="hover:text-brand-gold transition duration-300 relative group">
+                        About
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                    </a></li>
+                <li><a href="#contact" class="hover:text-brand-gold transition duration-300 relative group">
+                        Contact
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+                    </a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Cinematic Hero -->
+            <section class="relative h-screen flex items-center justify-center overflow-hidden bg-gray-900">
+                <!-- Background Image (DOM Order: First = Bottom) -->
+                <img src="/images/hero-new.jpg"
+                    class="absolute inset-0 w-full h-full object-cover opacity-100 animate-kenburns"
+                    alt="Dubai Skyline" />
+
+                <!-- Gradient Overlay -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-brand-blue/70 pointer-events-none">
+                </div>
+
+                <!-- Hero Content -->
+                <div class="relative z-10 text-center text-white px-4 max-w-5xl pt-24 md:pt-32">
+                    <div class="overflow-invisible mb-6">
+                        <h2
+                            class="text-sm md:text-base tracking-[0.4em] uppercase text-brand-gold animate-reveal delay-100 font-bold">
+                            Dubai's Premier Luxury Travel Concierge
+                        </h2>
+                    </div>
+                    <div class="overflow-invisible">
+                        <h1
+                            class="font-serif text-6xl md:text-8xl italic mb-4 animate-reveal delay-300 leading-none drop-shadow-lg">
+                            Experience <br /> <span class="not-italic text-5xl md:text-7xl">The Extraordinary</span>
+                        </h1>
+                    </div>
+                    <div class="overflow-invisible max-w-2xl mx-auto mb-8">
+                        <p
+                            class="text-lg md:text-xl font-light text-white/90 animate-reveal delay-500 leading-relaxed shadow-black drop-shadow-md">
+                            We craft bespoke Dubai itineraries, private desert safaris, and exclusive yacht charters for
+                            the discerning traveler. Experience the UAE beyond the ordinary.
+                        </p>
+                    </div>
+
+                    <div class="animate-reveal delay-500 flex justify-center gap-6 mb-12">
+                        <a href="#packages"
+                            class="bg-brand-gold text-brand-blue font-bold uppercase tracking-widest text-xs py-4 px-10 rounded-full hover:bg-white transition duration-300 shadow-lg hover:shadow-brand-gold/50 transform hover:-translate-y-1">
+                            Explore Packages
+                        </a>
+                        <a href="#contact"
+                            class="hidden md:inline-block border border-white text-white font-bold uppercase tracking-widest text-xs py-4 px-10 rounded-full hover:bg-white hover:text-brand-blue transition duration-300 hover:shadow-lg">
+                            Plan My Trip
+                        </a>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="mt-12 animate-reveal delay-700 w-full max-w-4xl mx-auto">
+                        <div
+                            class="bg-black/40 backdrop-blur-md border border-white/30 p-2 rounded-full flex flex-col md:flex-row gap-2 shadow-2xl">
+                            <div class="flex-1 relative">
+                                <i data-lucide="search"
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 w-5 h-5"></i>
+                                <input type="text" placeholder="Where would you like to go?"
+                                    class="w-full bg-transparent border-none text-white placeholder-white/80 pl-12 pr-4 py-3 focus:outline-none focus:ring-0 font-medium" />
+                            </div>
+                            <div class="w-[1px] bg-white/20 hidden md:block my-2"></div>
+                            <div class="flex-1 relative">
+                                <i data-lucide="calendar"
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 w-5 h-5"></i>
+                                <input type="text" placeholder="When?" onfocus="(this.type='date')"
+                                    onblur="(this.type='text')"
+                                    class="w-full bg-transparent border-none text-white placeholder-white/80 pl-12 pr-4 py-3 focus:outline-none focus:ring-0 [color-scheme:dark] font-medium" />
+                            </div>
+                            <button
+                                class="bg-brand-gold text-brand-blue font-bold uppercase tracking-widest text-xs py-3 px-8 rounded-full hover:bg-white transition duration-300 transform hover:scale-105">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="h-12 w-[1px] bg-gradient-to-b from-brand-gold to-transparent mx-auto mt-8 animate-reveal delay-700 opacity-50">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Introduction (Asymmetrical) -->
+            <section class="py-24 md:py-32 px-6 md:px-12 bg-white">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-2">
+                            <div class="w-1 h-1 bg-brand-gold rounded-full"></div>
+                            <span class="text-brand-gold uppercase tracking-widest text-xs">The Yuvinalis
+                                Distinction</span>
+                        </div>
+                        <div class="overflow-invisible">
+                            <h2 class="font-serif text-4xl md:text-5xl leading-tight text-brand-blue">
+                                Curating moments that <br /> become <span class="italic text-brand-gold">legends</span>.
+                            </h2>
+                        </div>
+                        <p class="font-light text-lg leading-relaxed text-gray-600 max-w-md">
+                            True luxury lies in the unseen details. Whether it's a private sunset yacht cruise along the
+                            coastline or an exclusive desert sanctuary under the stars, Yuvinalis crafts bespoke
+                            itineraries that transcend the ordinary.
+                        </p>
+                        <a href="#about"
+                            class="inline-block border-b border-brand-blue pb-1 uppercase text-xs tracking-widest text-brand-blue hover:text-brand-gold hover:border-brand-gold transition duration-300">
+                            Discover Our Heritage
+                        </a>
+                    </div>
+                    <div class="relative mt-8 md:mt-0 h-[500px] w-full">
+                        <img src="/images/safari-tent.jpg"
+                            class="w-[85%] h-full object-cover ml-auto rounded shadow-2xl" alt="Luxury Safari" />
+                        <div
+                            class="absolute bottom-12 left-0 md:left-12 bg-brand-blue text-white p-6 md:p-8 max-w-[200px] shadow-xl z-10">
+                            <p class="font-serif text-3xl italic mb-2 text-brand-gold">10+</p>
+                            <p class="text-xs uppercase tracking-widest opacity-80">Years of Excellence</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exclusive Tour Packages (Grid) -->
+            <section id="packages" class="py-24 bg-brand-cream relative">
+                <div class="max-w-7xl mx-auto px-6 md:px-12">
+                    <div class="text-center mb-16">
+                        <span class="text-brand-gold uppercase tracking-widest text-xs font-bold">Curated
+                            Experiences</span>
+                        <h2 class="font-serif text-4xl md:text-5xl text-brand-blue mt-4">Exclusive Tour Packages</h2>
+                        <div class="w-24 h-[1px] bg-brand-gold mx-auto mt-6"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Package 1: Desert Safari -->
+                        <div
+                            class="group bg-white hover:-translate-y-2 transition-transform duration-500 shadow-lg overflow-hidden">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="/images/safari-car.jpg"
+                                    class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                                    alt="Desert Safari" />
+                                <div
+                                    class="absolute top-4 right-4 bg-white/90 backdrop-blur px-4 py-2 text-xs font-bold uppercase tracking-widest text-brand-blue">
+                                    Popular
+                                </div>
+                            </div>
+                            <div class="p-8">
+                                <div class="flex justify-between items-baseline mb-4">
+                                    <h3 class="font-serif text-2xl text-brand-blue">Royal Desert Safari</h3>
+                                    <span class="text-brand-gold font-bold">$250</span>
+                                </div>
+                                <p class="text-gray-600 font-light text-sm mb-6 line-clamp-2">
+                                    Experience the magic of the dunes with a private vintage Land Rover, gourmet dinner
+                                    under the stars, and falconry.
+                                </p>
+                                <div
+                                    class="flex items-center gap-4 text-xs text-brand-blue/60 mb-8 border-t border-gray-100 pt-4">
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 6
+                                        Hours</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="users" class="w-3 h-3"></i>
+                                        Private</span>
+                                </div>
+                                <button
+                                    class="w-full py-4 border border-brand-blue text-brand-blue uppercase tracking-widest text-xs hover:bg-brand-blue hover:text-white transition duration-300">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Package 2: Yacht Charter -->
+                        <div
+                            class="group bg-white hover:-translate-y-2 transition-transform duration-500 shadow-lg overflow-hidden">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="/images/yacht-marina.jpg"
+                                    class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                                    alt="Yacht Charter" />
+                            </div>
+                            <div class="p-8">
+                                <div class="flex justify-between items-baseline mb-4">
+                                    <h3 class="font-serif text-2xl text-brand-blue">Sunset Yacht Cruise</h3>
+                                    <span class="text-brand-gold font-bold">$1,200</span>
+                                </div>
+                                <p class="text-gray-600 font-light text-sm mb-6 line-clamp-2">
+                                    Sail past the Atlantis and Burj Al Arab on a private 50ft yacht. Includes champagne
+                                    service and canapes.
+                                </p>
+                                <div
+                                    class="flex items-center gap-4 text-xs text-brand-blue/60 mb-8 border-t border-gray-100 pt-4">
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 3
+                                        Hours</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="users" class="w-3 h-3"></i> Up
+                                        to 10</span>
+                                </div>
+                                <button
+                                    class="w-full py-4 border border-brand-blue text-brand-blue uppercase tracking-widest text-xs hover:bg-brand-blue hover:text-white transition duration-300">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Package 3: City Tour -->
+                        <div
+                            class="group bg-white hover:-translate-y-2 transition-transform duration-500 shadow-lg overflow-hidden">
+                            <div class="relative h-80 overflow-hidden">
+                                <img src="/images/dubai-frame.jpg"
+                                    class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                                    alt="Modern Dubai" />
+                            </div>
+                            <div class="p-8">
+                                <div class="flex justify-between items-baseline mb-4">
+                                    <h3 class="font-serif text-2xl text-brand-blue">Modern Dubai VIP</h3>
+                                    <span class="text-brand-gold font-bold">$180</span>
+                                </div>
+                                <p class="text-gray-600 font-light text-sm mb-6 line-clamp-2">
+                                    A futuristic tour of the Museum of the Future, Dubai Frame, and High Tea at the Burj
+                                    Khalifa Lounge.
+                                </p>
+                                <div
+                                    class="flex items-center gap-4 text-xs text-brand-blue/60 mb-8 border-t border-gray-100 pt-4">
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 5
+                                        Hours</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="users" class="w-3 h-3"></i>
+                                        Small Group</span>
+                                </div>
+                                <button
+                                    class="w-full py-4 border border-brand-blue text-brand-blue uppercase tracking-widest text-xs hover:bg-brand-blue hover:text-white transition duration-300">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="experiences" class="py-24 md:py-32 bg-brand-blue text-white overflow-hidden">
+                <div class="px-6 md:px-12 mb-16 flex justify-between items-end max-w-7xl mx-auto">
+                    <div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="w-1 h-1 bg-brand-gold rounded-full"></div>
+                            <span class="text-brand-gold uppercase tracking-widest text-xs">Curated Packages</span>
+                        </div>
+                        <div class="overflow-invisible">
+                            <h2 class="font-serif text-3xl md:text-5xl">Signature Experiences</h2>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex gap-4">
+                        <button
+                            class="p-3 border border-white/20 rounded-full hover:bg-white hover:text-brand-blue transition"><i
+                                data-lucide="arrow-left"></i></button>
+                        <button
+                            class="p-3 border border-white/20 rounded-full hover:bg-white hover:text-brand-blue transition"><i
+                                data-lucide="arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Slider -->
+                <div class="flex gap-8 overflow-x-auto px-6 md:px-12 pb-12 snap-x hide-scrollbar">
+                    <!-- Card 1 -->
+                    <div class="min-w-[85vw] md:min-w-[400px] snap-center group cursor-pointer">
+                        <div class="relative overflow-hidden h-[500px] mb-6">
+                            <img src="/images/safari-tent.jpg"
+                                class="w-full h-full object-cover transition duration-700 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition"></div>
+                        </div>
+                        <span class="text-brand-gold text-xs uppercase tracking-widest">5 Days • All Inclusive</span>
+                        <h3 class="font-serif text-2xl mt-2 group-hover:italic transition-all">Dubai Christmas Luxury
+                        </h3>
+                        <p class="mt-2 text-white/60 text-sm">Experience the festive season in the heart of luxury.
+                            Includes 5-star stay and private safari.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="min-w-[85vw] md:min-w-[400px] snap-center group cursor-pointer">
+                        <div class="relative overflow-hidden h-[500px] mb-6">
+                            <img src="/images/safari-car.jpg"
+                                class="w-full h-full object-cover transition duration-700 group-hover:scale-110" />
+                        </div>
+                        <span class="text-brand-gold text-xs uppercase tracking-widest">Adventure</span>
+                        <h3 class="font-serif text-2xl mt-2 group-hover:italic transition-all">Royal Desert Safari</h3>
+                        <p class="mt-2 text-white/60 text-sm">Private dune bashing, VIP dinner, and starlit
+                            entertainment.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="min-w-[85vw] md:min-w-[400px] snap-center group cursor-pointer">
+                        <div class="relative overflow-hidden h-[500px] mb-6">
+                            <img src="/images/dubai-frame.jpg"
+                                class="w-full h-full object-cover transition duration-700 group-hover:scale-110" />
+                        </div>
+                        <span class="text-brand-gold text-xs uppercase tracking-widest">Visa Services</span>
+                        <h3 class="font-serif text-2xl mt-2 group-hover:italic transition-all">Seamless Entry</h3>
+                        <p class="mt-2 text-white/60 text-sm">Fast-track visas for 90 days, 60 days, and corporate
+                            entry.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services List (Minimalist) -->
+            <section class="py-24 md:py-32 px-6 md:px-12">
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div>
+                        <div class="flex items-center gap-2 mb-6">
+                            <div class="w-1 h-1 bg-brand-gold rounded-full"></div>
+                            <span class="text-brand-gold uppercase tracking-widest text-xs">Services</span>
+                        </div>
+                        <div class="overflow-invisible">
+                            <h2 class="font-serif text-4xl md:text-5xl mb-8">Our Expertise</h2>
+                        </div>
+                        <p class="text-gray-600 font-light leading-relaxed">We offer a complete suite of travel
+                            management services
+                            tailored for the discerning traveler and the efficient corporation.</p>
+                    </div>
+
+                    <div class="divide-y divide-gray-200">
+                        <div class="py-6 group flex justify-between items-center cursor-pointer">
+                            <h3
+                                class="text-xl font-light group-hover:text-brand-blue group-hover:translate-x-2 transition-all">
+                                Corporate Management</h3>
+                            <i data-lucide="arrow-right"
+                                class="opacity-0 group-hover:opacity-100 transition text-brand-gold"></i>
+                        </div>
+                        <div class="py-6 group flex justify-between items-center cursor-pointer">
+                            <h3
+                                class="text-xl font-light group-hover:text-brand-blue group-hover:translate-x-2 transition-all">
+                                Luxury Staycations</h3>
+                            <i data-lucide="arrow-right"
+                                class="opacity-0 group-hover:opacity-100 transition text-brand-gold"></i>
+                        </div>
+                        <div class="py-6 group flex justify-between items-center cursor-pointer">
+                            <h3
+                                class="text-xl font-light group-hover:text-brand-blue group-hover:translate-x-2 transition-all">
+                                Global Visa Assistance</h3>
+                            <i data-lucide="arrow-right"
+                                class="opacity-0 group-hover:opacity-100 transition text-brand-gold"></i>
+                        </div>
+                        <div class="py-6 group flex justify-between items-center cursor-pointer">
+                            <h3
+                                class="text-xl font-light group-hover:text-brand-blue group-hover:translate-x-2 transition-all">
+                                Yacht Charters</h3>
+                            <i data-lucide="arrow-right"
+                                class="opacity-0 group-hover:opacity-100 transition text-brand-gold"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact / Footer -->
+            <footer id="contact" class="bg-brand-blue text-white py-24 md:py-32 px-6 md:px-12">
+                <div class="max-w-7xl mx-auto">
+                    <div class="mb-16">
+                        <div class="flex items-center gap-2 mb-6">
+                            <div class="w-1 h-1 bg-brand-gold rounded-full"></div>
+                            <span class="text-brand-gold uppercase tracking-widest text-xs">Get in Touch</span>
+                        </div>
+                        <div class="overflow-invisible">
+                            <h2 class="font-serif text-4xl md:text-5xl mb-6">Let's Create Your Journey</h2>
+                        </div>
+                        <p class="font-light text-white/70 max-w-2xl">Whether you're planning a private tour, need a
+                            transfer, or want to explore our packages, we're here to help.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                        <div class="md:col-span-1">
+                            <h3 class="font-serif text-2xl mb-4">Yuvinalis</h3>
+                            <p class="font-light text-white/60 mb-8">Crafting memories, one journey at a time.</p>
+                            <div class="flex gap-4">
+                                <a href="#"
+                                    class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-brand-blue transition"><i
+                                        data-lucide="instagram" class="w-4 h-4"></i></a>
+                                <a href="#"
+                                    class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-brand-blue transition"><i
+                                        data-lucide="facebook" class="w-4 h-4"></i></a>
+                                <a href="#"
+                                    class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:bg-white hover:text-brand-blue transition"><i
+                                        data-lucide="mail" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="uppercase tracking-widest text-xs mb-6 text-brand-gold">Contact</h3>
+                                <p class="font-light mb-2">Office 727, Centurion Star Tower B</p>
+                                <p class="font-light mb-2">Dubai, United Arab Emirates</p>
+                                <p class="font-light mt-6">+971 56 151 0931</p>
+                                <p class="font-light">info@yuvinalistourism.com</p>
+                            </div>
+                            <div>
+                                <h3 class="uppercase tracking-widest text-xs mb-6 text-brand-gold">Enquiry</h3>
+                                <form class="space-y-4">
+                                    <input type="email" placeholder="Your Email"
+                                        class="w-full bg-transparent border-b border-white/20 py-2 focus:outline-none focus:border-brand-gold transition placeholder-white/40" />
+                                    <button
+                                        class="uppercase text-xs tracking-widest border border-white/20 py-3 px-8 rounded-full hover:bg-brand-gold hover:border-brand-gold hover:text-brand-blue transition">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-xs text-white/40">
+                        <p>&copy; 2024 Yuvinalis Tourism. All rights reserved.</p>
+                        <div class="flex gap-6 mt-4 md:mt-0">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms & Conditions</a>
+                        </div>
+                    </div>
+            </footer>
+        </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
