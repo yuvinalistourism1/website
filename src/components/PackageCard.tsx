@@ -1,69 +1,77 @@
+"use client";
+
 import Image from "next/image";
-import { Clock, Users } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Users, Clock, ArrowRight } from "lucide-react";
+import { FadeIn } from "./animations/FadeIn";
+import { urlFor } from "@/sanity/lib/image";
 
 interface PackageCardProps {
     title: string;
-    price: string;
-    image: string;
-    description: string;
+    price: string | number;
+    image: any;
     duration: string;
-    guests: string;
-    tag?: string;
+    guests?: string;
+    description: string;
+    delay?: number;
 }
 
 export function PackageCard({
     title,
     price,
     image,
-    description,
     duration,
-    guests,
-    tag,
+    guests = "Custom Experience",
+    description,
+    delay = 0,
 }: PackageCardProps) {
+    const imageUrl = typeof image === 'string' ? image : urlFor(image).url();
+    const displayPrice = typeof price === 'number' ? `AED ${price.toLocaleString()}` : price;
+
     return (
-        <div className="group bg-white hover:-translate-y-2 transition-transform duration-500 shadow-lg overflow-hidden border border-gray-100/50">
-            <div className="relative h-80 overflow-hidden">
-                <Image
-                    src={image}
-                    alt={title}
-                    fill
-                    className="object-cover transition duration-700 group-hover:scale-110"
-                />
-                {tag && (
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-4 py-2 text-xs font-bold uppercase tracking-widest text-brand-blue shadow-sm">
-                        {tag}
+        <FadeIn delay={delay} yOffset={40}>
+            <div className="group relative bg-white border border-brand-blue/5 overflow-hidden rounded-sm transition-all duration-500 hover:shadow-2xl">
+                <div className="relative aspect-[4/5] overflow-hidden">
+                    <Image
+                        src={imageUrl}
+                        alt={title}
+                        fill
+                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                    <div className="absolute top-6 left-6">
+                        <span className="bg-brand-gold text-brand-dark px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">
+                            From {displayPrice}
+                        </span>
                     </div>
-                )}
-            </div>
-
-            <div className="p-8">
-                <div className="flex justify-between items-baseline mb-4">
-                    <h3 className="font-serif text-2xl text-brand-blue">{title}</h3>
-                    <span className="text-brand-gold font-bold text-lg">{price}</span>
                 </div>
 
-                <p className="text-gray-600 font-light text-sm mb-6 line-clamp-2 h-10">
-                    {description}
-                </p>
+                <div className="p-8">
+                    <div className="flex items-center gap-6 mb-6 text-brand-blue/40">
+                        <div className="flex items-center gap-2">
+                            <Clock className="w-3.5 h-3.5 text-brand-gold" />
+                            <span className="text-[10px] font-bold uppercase tracking-widest">{duration}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Users className="w-3.5 h-3.5 text-brand-gold" />
+                            <span className="text-[10px] font-bold uppercase tracking-widest">{guests}</span>
+                        </div>
+                    </div>
 
-                <div className="flex items-center gap-4 text-xs text-brand-blue/60 mb-8 border-t border-gray-100 pt-4">
-                    <span className="flex items-center gap-1">
-                        <Clock className="w-3 h-3" /> {duration}
-                    </span>
-                    <span className="flex items-center gap-1">
-                        <Users className="w-3 h-3" /> {guests}
-                    </span>
+                    <h3 className="text-xl font-serif italic text-brand-blue mb-4 group-hover:text-brand-gold transition-colors duration-300">
+                        {title}
+                    </h3>
+
+                    <p className="text-sm text-brand-blue/60 leading-relaxed font-light mb-8 line-clamp-2">
+                        {description}
+                    </p>
+
+                    <button className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-blue group/btn">
+                        View Journey
+                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-2 text-brand-gold" />
+                    </button>
                 </div>
-
-                <Button
-                    variant="outline"
-                    className="w-full py-6 border-brand-blue text-brand-blue uppercase tracking-widest text-xs hover:bg-brand-blue hover:text-white transition-colors duration-300 rounded-none border-x-0 border-b-0 border-t"
-                >
-                    View Details
-                </Button>
             </div>
-        </div>
+        </FadeIn>
     );
 }

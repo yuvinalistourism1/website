@@ -2,161 +2,124 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { Search, Calendar as CalendarIcon, MapPin } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Search, Calendar as CalendarIcon } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Calendar } from "@/components/ui/calendar";
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { TextReveal } from "./animations/TextReveal";
+import { FadeIn } from "./animations/FadeIn";
+import { ScrollIndicator } from "./ScrollIndicator";
 
 export function Hero() {
     const [date, setDate] = React.useState<Date>();
+    const { scrollY } = useScroll();
+    const y1 = useTransform(scrollY, [0, 500], [0, 200]);
+    const y2 = useTransform(scrollY, [0, 500], [0, -100]);
+    const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
     return (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gray-900">
-            {/* Background Image with Ken Burns Effect */}
-            <motion.div
-                initial={{ scale: 1 }}
-                animate={{ scale: 1.1 }}
-                transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-                className="absolute inset-0 w-full h-full"
-            >
+        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-brand-dark">
+            {/* Layered Background Effect */}
+            <motion.div style={{ y: y1 }} className="absolute inset-0 w-full h-full scale-110">
+                <Image
+                    src="/images/hero-new.jpg"
+                    alt="Dubai Skyline Background"
+                    fill
+                    priority
+                    className="object-cover blur-[2px] opacity-40"
+                />
+            </motion.div>
+
+            <motion.div style={{ y: y2 }} className="absolute inset-0 w-full h-full">
                 <Image
                     src="/images/hero-new.jpg"
                     alt="Dubai Skyline"
                     fill
                     priority
-                    className="object-cover opacity-90"
+                    className="object-cover opacity-80"
                 />
             </motion.div>
 
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-brand-blue/70 pointer-events-none" />
+            {/* Hero Overlays */}
+            <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/60 via-transparent to-brand-dark pointer-events-none" />
+            <div className="absolute inset-0 bg-black/20 pointer-events-none" />
 
             {/* Hero Content */}
-            <div className="relative z-10 text-center text-white px-4 max-w-5xl pt-24 md:pt-32 w-full">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.8 }}
-                    className="mb-6"
-                >
-                    <h2 className="text-sm md:text-base tracking-[0.4em] uppercase text-brand-gold font-bold">
-                        Dubai's Premier Luxury Travel Concierge
+            <motion.div style={{ opacity }} className="relative z-10 text-center text-white px-4 max-w-5xl w-full">
+                <FadeIn delay={0.2}>
+                    <h2 className="text-[10px] md:text-xs tracking-[0.5em] uppercase text-brand-gold font-bold mb-8">
+                        Dubai&apos;s Premier Luxury Travel Concierge
                     </h2>
-                </motion.div>
+                </FadeIn>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4, duration: 0.8 }}
-                    className="mb-8"
-                >
-                    <h1 className="font-serif text-6xl md:text-8xl italic mb-4 leading-none drop-shadow-lg">
-                        Experience <br /> <span className="not-italic text-5xl md:text-7xl">The Extraordinary</span>
-                    </h1>
-                </motion.div>
+                <div className="mb-12">
+                    <TextReveal
+                        text="Experience"
+                        className="font-serif text-7xl md:text-9xl italic leading-none"
+                        delay={0.4}
+                    />
+                    <TextReveal
+                        text="The Extraordinary"
+                        className="text-5xl md:text-7xl uppercase tracking-tighter mt-2"
+                        delay={0.6}
+                    />
+                </div>
 
-                <motion.p
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6, duration: 0.8 }}
-                    className="max-w-2xl mx-auto mb-12 text-lg md:text-xl font-light text-white/90 leading-relaxed shadow-black drop-shadow-md"
-                >
-                    We craft bespoke Dubai itineraries, private desert safaris, and exclusive yacht charters for
-                    the discerning traveler. Experience the UAE beyond the ordinary.
-                </motion.p>
+                <FadeIn delay={0.8} yOffset={30}>
+                    <p className="max-w-2xl mx-auto mb-16 text-lg md:text-xl font-light text-white/80 leading-relaxed italic">
+                        Curating bespoke Dubai itineraries, private desert safaris, and exclusive yacht charters
+                        for the discerning traveler.
+                    </p>
+                </FadeIn>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.8, duration: 0.8 }}
-                    className="flex justify-center gap-6 mb-16"
-                >
-                    <Button
-                        size="lg"
-                        className="bg-brand-gold text-brand-blue hover:bg-white hover:text-brand-blue font-bold uppercase tracking-widest text-xs px-10 py-6 rounded-full shadow-lg transition-all transform hover:-translate-y-1"
-                        asChild
-                    >
-                        <a href="#packages">Explore Packages</a>
-                    </Button>
-                    <Button
-                        size="lg"
-                        variant="outline"
-                        className="hidden md:inline-flex border-white text-white hover:bg-white hover:text-brand-blue font-bold uppercase tracking-widest text-xs px-10 py-6 rounded-full"
-                        asChild
-                    >
-                        <a href="#contact">Plan My Trip</a>
-                    </Button>
-                </motion.div>
-
-                {/* Search Bar */}
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.0, duration: 0.8 }}
-                    className="w-full max-w-4xl mx-auto"
-                >
-                    <div className="bg-black/40 backdrop-blur-md border border-white/30 p-2 rounded-full flex flex-col md:flex-row gap-2 shadow-2xl">
-                        {/* Location Input */}
-                        <div className="flex-1 relative flex items-center px-4">
-                            <Search className="text-white/80 w-5 h-5 mr-3" />
+                {/* Action Bar */}
+                <FadeIn delay={1.0} yOffset={30} className="w-full max-w-4xl mx-auto">
+                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-2 rounded-full flex flex-col md:flex-row gap-2 shadow-2xl items-center">
+                        {/* Search Input */}
+                        <div className="flex-1 relative flex items-center px-6 w-full md:w-auto">
+                            <Search className="text-brand-gold w-4 h-4 mr-4" />
                             <Input
                                 type="text"
                                 placeholder="Where would you like to go?"
-                                className="bg-transparent border-none text-white placeholder:text-white/70 focus-visible:ring-0 focus-visible:ring-offset-0 text-base"
+                                className="bg-transparent border-none text-white placeholder:text-white/40 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm h-12"
                             />
                         </div>
 
-                        <div className="w-[1px] bg-white/20 hidden md:block my-2" />
+                        <div className="w-[1px] h-8 bg-white/10 hidden md:block" />
 
                         {/* Date Picker */}
-                        <div className="flex-1 relative flex items-center px-4">
-                            <CalendarIcon className="text-white/80 w-5 h-5 mr-3" />
+                        <div className="flex-1 relative flex items-center px-6 w-full md:w-auto">
+                            <CalendarIcon className="text-brand-gold w-4 h-4 mr-4" />
                             <Popover>
                                 <PopoverTrigger asChild>
                                     <Button
                                         variant={"ghost"}
                                         className={cn(
-                                            "w-full justify-start text-left font-normal bg-transparent hover:bg-transparent text-white hover:text-brand-gold p-0 text-base",
-                                            !date && "text-white/70"
+                                            "w-full justify-start text-left font-normal bg-transparent hover:bg-transparent text-white hover:text-brand-gold p-0 text-sm h-12",
+                                            !date && "text-white/40"
                                         )}
                                     >
-                                        {date ? format(date, "PPP") : <span>When?</span>}
+                                        {date ? format(date, "PPP") : <span>Select Date</span>}
                                     </Button>
                                 </PopoverTrigger>
                                 <PopoverContent className="w-auto p-0" align="start">
-                                    <Calendar
-                                        mode="single"
-                                        selected={date}
-                                        onSelect={setDate}
-                                        initialFocus
-                                    />
+                                    <Calendar mode="single" selected={date} onSelect={setDate} initialFocus />
                                 </PopoverContent>
                             </Popover>
                         </div>
 
-                        <Button
-                            className="bg-brand-gold text-brand-blue hover:bg-white hover:text-brand-blue font-bold uppercase tracking-widest text-xs py-6 px-8 rounded-full transition duration-300"
-                        >
-                            Search
+                        <Button className="bg-brand-gold text-brand-dark hover:bg-white transition-all duration-500 font-bold uppercase tracking-widest text-[10px] h-12 px-10 rounded-full shadow-lg">
+                            Explore Now
                         </Button>
                     </div>
-                </motion.div>
+                </FadeIn>
+            </motion.div>
 
-                <motion.div
-                    initial={{ height: 0 }}
-                    animate={{ height: 48 }}
-                    transition={{ delay: 1.2, duration: 1 }}
-                    className="w-[1px] bg-gradient-to-b from-brand-gold to-transparent mx-auto mt-12 opacity-50"
-                />
-            </div>
+            <ScrollIndicator />
         </section>
     );
 }
