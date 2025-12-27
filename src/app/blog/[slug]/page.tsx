@@ -208,7 +208,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                                                     <ArrowLeft className="w-4 h-4 text-brand-gold group-hover:-translate-x-1 transition-transform" />
                                                     <span className="text-xs uppercase tracking-[0.16em] font-bold text-brand-blue/60">Previous</span>
                                                 </div>
-                                                <h4 className="text-lg font-serif text-brand-dark group-hover:text-brand-gold transition-colors line-clamp-2">{previous.title}</h4>
+                                                <h4 className="text-base sm:text-lg font-serif text-brand-dark group-hover:text-brand-gold transition-colors leading-snug">{previous.title}</h4>
                                                 {previous.category && <p className="text-xs text-brand-blue/50 mt-2">{previous.category}</p>}
                                             </Link>
                                         )}
@@ -218,7 +218,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                                                     <span className="text-xs uppercase tracking-[0.16em] font-bold text-brand-blue/60">Next</span>
                                                     <ArrowRight className="w-4 h-4 text-brand-gold group-hover:translate-x-1 transition-transform" />
                                                 </div>
-                                                <h4 className="text-lg font-serif text-brand-dark group-hover:text-brand-gold transition-colors line-clamp-2 text-right">{next.title}</h4>
+                                                <h4 className="text-base sm:text-lg font-serif text-brand-dark group-hover:text-brand-gold transition-colors leading-snug text-right">{next.title}</h4>
                                                 {next.category && <p className="text-xs text-brand-blue/50 mt-2 text-right">{next.category}</p>}
                                             </Link>
                                         )}

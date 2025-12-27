@@ -125,7 +125,7 @@ export default async function BlogPage() {
                                                     </>
                                                 )}
                                             </div>
-                                            <h3 className="text-2xl font-serif text-brand-dark group-hover:text-brand-gold transition-colors mb-3 line-clamp-2">
+                                            <h3 className="text-xl sm:text-2xl font-serif text-brand-dark group-hover:text-brand-gold transition-colors mb-3 leading-snug">
                                                 {post.title}
                                             </h3>
                                             {post.excerpt && (

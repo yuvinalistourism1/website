@@ -53,9 +53,8 @@ export function FinalCTA() {
                             </div>
                         </div>
 
-                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif italic text-white mb-6 leading-tight">
-                            Ready to plan your
-                            <span className="block text-brand-gold mt-2">extraordinary journey?</span>
+                        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif italic text-white mb-6 leading-tight">
+                            Ready to plan your <span className="text-brand-gold">extraordinary journey?</span>
                         </h2>
 
                         <p className="text-lg md:text-xl text-white/70 font-light max-w-3xl mx-auto mb-12 leading-relaxed">

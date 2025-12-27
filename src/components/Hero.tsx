@@ -56,12 +56,12 @@ export function Hero() {
                 <div className="mb-8 sm:mb-12 md:mb-16">
                     <TextReveal
                         text="Get your visa sorted,"
-                        className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl italic leading-none block mb-2 md:mb-4 px-2 sm:px-4 md:px-0"
+                        className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl italic leading-tight block mb-2 md:mb-4 px-2 sm:px-4 md:px-0"
                         delay={0.4}
                     />
                     <TextReveal
                         text="without the confusion."
-                        className="text-xl sm:text-2xl md:text-5xl lg:text-6xl uppercase tracking-tighter block px-2 sm:px-4 md:px-0"
+                        className="text-lg sm:text-2xl md:text-4xl lg:text-5xl uppercase tracking-tighter leading-tight block px-2 sm:px-4 md:px-0"
                         delay={0.6}
                     />
                 </div>

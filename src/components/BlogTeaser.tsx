@@ -89,7 +89,7 @@ export async function BlogTeaser() {
                                                 </span>
                                             )}
                                         </div>
-                                        <h3 className="text-2xl font-serif text-brand-dark group-hover:text-brand-gold transition-colors mb-4 line-clamp-2">
+                                        <h3 className="text-xl sm:text-2xl font-serif text-brand-dark group-hover:text-brand-gold transition-colors mb-4 leading-snug">
                                             {post.title}
                                         </h3>
                                         <div className="flex items-center gap-2 text-brand-gold text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all">
