@@ -12,14 +12,14 @@ const trustItems = [
 
 export function TrustBar() {
     return (
-        <section className="bg-brand-dark border-b border-white/5 py-8">
+        <section className="bg-brand-dark border-b border-white/5 py-6 sm:py-8">
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
                     {trustItems.map((item, index) => (
                         <FadeIn key={index} delay={0.2 + index * 0.1}>
-                            <div className="flex items-center justify-center gap-3 text-white/60 hover:text-brand-gold transition-colors duration-300">
-                                <item.icon className="w-5 h-5" />
-                                <span className="text-xs uppercase tracking-widest font-bold">{item.text}</span>
+                            <div className="flex items-center justify-center gap-2 sm:gap-3 text-white/60 hover:text-brand-gold transition-colors duration-300">
+                                <item.icon className="w-4 sm:w-5 h-4 sm:h-5 shrink-0" />
+                                <span className="text-[9px] sm:text-xs uppercase tracking-widest font-bold">{item.text}</span>
                             </div>
                         </FadeIn>
                     ))}

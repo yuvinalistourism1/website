@@ -35,28 +35,28 @@ const faqs = [
 
 export function FAQ() {
     return (
-        <section className="py-24 bg-brand-cream" id="faq">
+        <section className="py-16 sm:py-20 md:py-24 bg-brand-cream" id="faq">
             <div className="container mx-auto px-4 max-w-4xl">
-                <div className="text-center mb-16">
+                <div className="text-center mb-12 sm:mb-16">
                     <FadeIn>
                         <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-4 block">
                             FAQs
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-serif italic text-brand-dark mb-6">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif italic text-brand-dark mb-4 sm:mb-6">
                             Quick answers
                         </h2>
                     </FadeIn>
                 </div>
 
-                <div className="mb-16">
+                <div className="mb-12 sm:mb-16">
                     <Accordion type="single" collapsible className="w-full">
                         {faqs.map((faq, index) => (
                             <FadeIn key={index} delay={index * 0.1}>
-                                <AccordionItem value={`item-${index}`} className="border-b border-brand-blue/10 mb-4 bg-white/50 rounded-2xl px-6 border-none shadow-sm">
-                                    <AccordionTrigger className="text-lg md:text-xl font-serif text-brand-dark hover:text-brand-gold hover:no-underline py-6">
+                                <AccordionItem value={`item-${index}`} className="border-b border-brand-blue/10 mb-2 sm:mb-4 bg-white/50 rounded-lg sm:rounded-2xl px-4 sm:px-6 border-none shadow-sm">
+                                    <AccordionTrigger className="text-base sm:text-lg md:text-xl font-serif text-brand-dark hover:text-brand-gold hover:no-underline py-4 sm:py-6">
                                         {faq.question}
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-brand-blue/60 leading-relaxed text-base pb-6">
+                                    <AccordionContent className="text-brand-blue/60 leading-relaxed text-sm sm:text-base pb-4 sm:pb-6">
                                         {faq.answer}
                                     </AccordionContent>
                                 </AccordionItem>
@@ -65,9 +65,12 @@ export function FAQ() {
                     </Accordion>
                 </div>
 
-                <FadeIn delay={0.6} yOffset={20} className="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <FadeIn delay={0.6} yOffset={20} className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full">
                     <Button
-                        data-tally-open="w4K00W"
+                        data-tally-open="ZjoraV"
+                        data-tally-layout="modal"
+                        data-tally-width="700"
+                        data-tally-auto-close="5000"
                         data-tally-emoji-text="👋"
                         data-tally-emoji-animation="wave"
                         className="bg-brand-gold text-brand-dark hover:bg-white border border-transparent hover:border-brand-gold transition-all duration-500 font-bold uppercase tracking-widest text-[10px] h-14 px-10 rounded-full shadow-lg"

@@ -53,9 +53,9 @@ export function Navbar() {
                 borderColor: borderOpacity,
                 y: useTransform(scrollY, [0, 100], [0, -10]),
             }}
-            className="fixed top-4 inset-x-0 mx-auto w-[95%] max-w-[1400px] z-50 transition-all duration-300 rounded-full"
+            className="fixed top-2 sm:top-4 inset-x-0 mx-auto w-[98%] sm:w-[95%] max-w-[1400px] z-50 transition-all duration-300 rounded-full"
         >
-            <nav className="relative w-full px-4 md:px-8 h-16 md:h-20 grid grid-cols-12 items-center">
+            <nav className="relative w-full px-3 sm:px-4 md:px-8 h-14 sm:h-16 md:h-20 grid grid-cols-12 items-center">
                 <div className="col-span-2 lg:col-span-3 flex justify-start">
                     <Link href="/" className="group flex items-center gap-3">
                         <div className="relative w-8 h-8 md:w-10 md:h-10 overflow-hidden rounded-full border border-brand-gold/50 group-hover:border-brand-gold transition-colors">

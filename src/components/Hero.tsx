@@ -19,7 +19,7 @@ export function Hero() {
     const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
     return (
-        <section className="relative min-h-[100dvh] flex items-start justify-center overflow-hidden bg-brand-dark pt-24 md:pt-28 pb-12 md:pb-20">
+        <section className="relative min-h-[100dvh] flex items-start justify-center overflow-hidden bg-brand-dark pt-20 sm:pt-24 md:pt-28 pb-8 sm:pb-12 md:pb-20">
             {/* Layered Background Effect */}
             <motion.div style={{ y: y1 }} className="absolute inset-0 w-full h-full scale-110">
                 <Image
@@ -46,33 +46,33 @@ export function Hero() {
             <div className="absolute inset-0 bg-black/20 pointer-events-none" />
 
             {/* Hero Content */}
-            <motion.div style={{ opacity }} className="relative z-10 text-center text-white px-4 max-w-5xl w-full pt-8 md:pt-12 pb-8 md:pb-12">
+            <motion.div style={{ opacity }} className="relative z-10 text-center text-white px-3 sm:px-4 max-w-5xl w-full pt-4 sm:pt-8 md:pt-12 pb-6 sm:pb-8 md:pb-12">
                 <FadeIn delay={0.2}>
-                    <h2 className="text-[10px] md:text-xs tracking-[0.5em] uppercase text-brand-gold font-bold mb-8 md:mb-12">
+                    <h2 className="text-[8px] sm:text-[10px] md:text-xs tracking-[0.5em] uppercase text-brand-gold font-bold mb-6 sm:mb-8 md:mb-12">
                         UAE • Schengen • China (and more)
                     </h2>
                 </FadeIn>
 
-                <div className="mb-12 md:mb-16">
+                <div className="mb-8 sm:mb-12 md:mb-16">
                     <TextReveal
                         text="Get your visa sorted,"
-                        className="font-serif text-4xl sm:text-5xl md:text-8xl italic leading-none block mb-2 md:mb-4 px-4 md:px-0"
+                        className="font-serif text-3xl sm:text-4xl md:text-7xl lg:text-8xl italic leading-none block mb-2 md:mb-4 px-2 sm:px-4 md:px-0"
                         delay={0.4}
                     />
                     <TextReveal
                         text="without the confusion."
-                        className="text-2xl sm:text-3xl md:text-6xl uppercase tracking-tighter block px-4 md:px-0"
+                        className="text-xl sm:text-2xl md:text-5xl lg:text-6xl uppercase tracking-tighter block px-2 sm:px-4 md:px-0"
                         delay={0.6}
                     />
                 </div>
 
                 <FadeIn delay={0.8} yOffset={30}>
-                    <p className="max-w-2xl mx-auto mb-16 md:mb-20 text-lg md:text-xl font-light text-white/80 leading-relaxed">
+                    <p className="max-w-2xl mx-auto mb-12 sm:mb-16 md:mb-20 text-sm sm:text-base md:text-lg lg:text-xl font-light text-white/80 leading-relaxed px-2 sm:px-4 md:px-0">
                         We send a clear checklist, guide your documents, and keep you updated on WhatsApp. You can also book flights, hotels, transfers, sightseeing, and a complete travel itinerary in one place.
                     </p>
                 </FadeIn>
 
-                <FadeIn delay={1.0} yOffset={30} className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mb-16 md:mb-24 px-4 md:px-0">
+                <FadeIn delay={1.0} yOffset={30} className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center mb-12 sm:mb-16 md:mb-24 px-2 sm:px-4 md:px-0 w-full">
                     <Button
                         data-tally-open="ZjoraV"
                         data-tally-layout="modal"
