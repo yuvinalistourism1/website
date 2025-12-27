@@ -5,7 +5,8 @@ import Image from "next/image";
 import {
     Instagram,
     Facebook,
-    Twitter,
+    Youtube,
+    Music,
     Mail,
     Phone,
     MapPin,
@@ -49,13 +50,21 @@ export function Footer() {
                             </p>
 
                             <div className="flex gap-6">
-                                {[Instagram, Facebook, Twitter].map((Icon, i) => (
+                                {[
+                                    { Icon: Facebook, href: "https://www.facebook.com/yuvinalistourism", label: "Facebook" },
+                                    { Icon: Instagram, href: "https://www.instagram.com/yuvinalistourism", label: "Instagram" },
+                                    { Icon: Music, href: "https://www.tiktok.com/@yuvinalistourism", label: "TikTok" },
+                                    { Icon: Youtube, href: "https://www.youtube.com/@Judyyuvinalis2024", label: "YouTube" }
+                                ].map((social, i) => (
                                     <Link
                                         key={i}
-                                        href="#"
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={social.label}
                                         className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold hover:text-brand-dark transition-all duration-500 group"
                                     >
-                                        <Icon className="w-5 h-5 transition-transform duration-500 group-hover:scale-110" />
+                                        <social.Icon className="w-5 h-5 transition-transform duration-500 group-hover:scale-110" />
                                     </Link>
                                 ))}
                             </div>
