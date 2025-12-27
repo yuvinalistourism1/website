@@ -160,12 +160,19 @@ export function Footer() {
                     <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/20">
                         &copy; {currentYear} Yuvinalis Tourism. All Rights Reserved.
                     </p>
-                    <div className="flex gap-12">
-                        {["Privacy Policy", "Terms of Service", "Cookie Policy", "refunds"].map((item) => (
-                            <Link key={item} href={`/${item.toLowerCase().replace(/ /g, "-")}`} className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/20 hover:text-brand-gold transition-colors">
-                                {item}
-                            </Link>
-                        ))}
+                    <div className="flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-12">
+                        <Link href="/privacy" className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/20 hover:text-brand-gold transition-colors">
+                            Privacy Policy
+                        </Link>
+                        <Link href="/terms" className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/20 hover:text-brand-gold transition-colors">
+                            Terms & Conditions
+                        </Link>
+                        <Link href="/cookies" className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/20 hover:text-brand-gold transition-colors">
+                            Cookie Policy
+                        </Link>
+                        <Link href="/refunds" className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/20 hover:text-brand-gold transition-colors">
+                            Refund Policy
+                        </Link>
                     </div>
                 </div>
             </div>

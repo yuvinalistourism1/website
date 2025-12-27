@@ -18,7 +18,7 @@ const navLinks = [
     { name: "Visas", href: "#visas" },
     { name: "Travel Services", href: "#services" },
     { name: "Tours", href: "#tours" },
-    { name: "Blog", href: "#blog" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
 ];
 
