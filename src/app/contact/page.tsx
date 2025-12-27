@@ -1,15 +1,48 @@
-"use client";
-
 import Link from "next/link";
+import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { StructuredData, dubaiOfficeSchema, nairobiOfficeSchema } from "@/components/StructuredData";
+
+export const metadata: Metadata = {
+    title: "Contact Us - Dubai & Nairobi Offices | Yuvinalis Tourism",
+    description: "Get in touch with Yuvinalis Tourism. Visit our Dubai main office in Deira or our Nairobi branch. WhatsApp +971 56 151 0931 for immediate assistance with visa services and travel bookings.",
+    keywords: ["contact Yuvinalis Tourism", "Dubai office", "Nairobi office", "visa services Dubai", "travel agency contact", "WhatsApp travel agency"],
+    openGraph: {
+        title: "Contact Us | Yuvinalis Tourism",
+        description: "Get in touch with our Dubai and Nairobi offices for visa services and luxury travel experiences.",
+        url: "https://yuvinalis.com/contact",
+        siteName: "Yuvinalis Tourism",
+        images: [
+            {
+                url: "https://yuvinalis.com/images/hero-new.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Contact Yuvinalis Tourism",
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Contact Us | Yuvinalis Tourism",
+        description: "Get in touch with our Dubai and Nairobi offices for visa services and luxury travel experiences.",
+        images: ["https://yuvinalis.com/images/hero-new.jpg"],
+    },
+    alternates: {
+        canonical: "https://yuvinalis.com/contact",
+    },
+};
 
 export default function ContactPage() {
     return (
         <main className="min-h-screen bg-brand-cream font-sans antialiased text-brand-dark selection:bg-brand-gold selection:text-brand-blue">
+            <StructuredData data={dubaiOfficeSchema} />
+            <StructuredData data={nairobiOfficeSchema} />
             <Navbar />
 
             <section className="pt-48 pb-24 bg-brand-dark text-white relative overflow-hidden">

@@ -1,9 +1,16 @@
-"use client";
-
+import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { FileText } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Terms & Conditions | Yuvinalis Tourism",
+    description: "Terms and conditions for using Yuvinalis Tourism travel services. Read our rules and regulations for visa applications, tour bookings, and travel packages.",
+    alternates: {
+        canonical: "https://yuvinalis.com/terms",
+    },
+};
 
 export default function TermsPage() {
     return (

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -10,6 +11,7 @@ import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+import { StructuredData, generateBlogPostingSchema } from "@/components/StructuredData";
 
 type BlogPost = {
     _id: string;
@@ -30,6 +32,55 @@ type BlogPost = {
 };
 
 export const revalidate = 60;
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const post = await getPost(slug);
+
+    if (!post) {
+        return {
+            title: "Post Not Found | Yuvinalis Tourism Blog",
+            description: "The blog post you're looking for could not be found.",
+        };
+    }
+
+    const imageUrl = post.mainImage ? urlFor(post.mainImage).width(1200).height(630).url() : "https://yuvinalis.com/images/hero-new.jpg";
+    const description = post.excerpt || `Read ${post.title} on Yuvinalis Tourism Blog - Your guide to travel and visa information.`;
+    const publishedTime = post.publishedAt ? new Date(post.publishedAt).toISOString() : undefined;
+
+    return {
+        title: `${post.title} | Yuvinalis Tourism Blog`,
+        description,
+        keywords: post.tags || ["travel guide", "visa information", "Dubai travel"],
+        openGraph: {
+            title: post.title,
+            description,
+            url: `https://yuvinalis.com/blog/${slug}`,
+            siteName: "Yuvinalis Tourism",
+            images: [
+                {
+                    url: imageUrl,
+                    width: 1200,
+                    height: 630,
+                    alt: post.title,
+                },
+            ],
+            locale: "en_US",
+            type: "article",
+            publishedTime,
+            authors: post.author?.name ? [post.author.name] : ["Yuvinalis Team"],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: post.title,
+            description,
+            images: [imageUrl],
+        },
+        alternates: {
+            canonical: `https://yuvinalis.com/blog/${slug}`,
+        },
+    };
+}
 
 const portableComponents: PortableTextComponents = {
     block: {
@@ -139,8 +190,25 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     const authorRole = post.author?.role || "Travel & Visa Specialists";
     const authorAvatar = post.author?.avatar ? urlFor(post.author.avatar).width(200).height(200).url() : undefined;
 
+    // Generate schema for this blog post
+    const blogSchema = generateBlogPostingSchema({
+        title: post.title,
+        excerpt: post.excerpt,
+        slug: post.slug.current,
+        mainImage: coverImage,
+        publishedAt: post.publishedAt,
+        author: {
+            name: authorName,
+            role: authorRole,
+            avatar: authorAvatar
+        },
+        category: post.category,
+        tags: post.tags
+    });
+
     return (
         <main className="min-h-screen bg-brand-cream font-sans antialiased text-brand-dark">
+            <StructuredData data={blogSchema} />
             <Navbar />
 
             <article>

@@ -1,9 +1,16 @@
-"use client";
-
+import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { RefreshCcw } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Refund & Cancellation Policy | Yuvinalis Tourism",
+    description: "Read Yuvinalis Tourism's refund and cancellation policy. Understand our guidelines for visa service cancellations, tour bookings, and travel package modifications.",
+    alternates: {
+        canonical: "https://yuvinalis.com/refunds",
+    },
+};
 
 export default function RefundsPage() {
     return (

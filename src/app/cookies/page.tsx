@@ -1,9 +1,16 @@
-"use client";
-
+import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Cookie } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Cookie Policy | Yuvinalis Tourism",
+    description: "Learn how Yuvinalis Tourism uses cookies and similar tracking technologies on our website. Manage your cookie preferences and understand data collection practices.",
+    alternates: {
+        canonical: "https://yuvinalis.com/cookies",
+    },
+};
 
 export default function CookiesPage() {
     return (

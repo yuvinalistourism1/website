@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
 import { format } from "date-fns";
 import { MoveRight } from "lucide-react";
 
@@ -8,6 +9,37 @@ import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+
+export const metadata: Metadata = {
+    title: "Travel & Visa Guides - Tips, Checklists & Itineraries | Yuvinalis Tourism Blog",
+    description: "Fresh visa checklists, travel itineraries, and on-the-ground advice from our Dubai team. Learn about UAE visas, Schengen applications, China travel, and Dubai experiences.",
+    keywords: ["visa guide", "travel blog", "Dubai travel tips", "visa checklist", "UAE visa requirements", "Schengen visa guide", "travel itinerary", "Dubai travel advice"],
+    openGraph: {
+        title: "Travel & Visa Guides | Yuvinalis Tourism Blog",
+        description: "Fresh visa checklists, travel itineraries, and on-the-ground advice from our Dubai team.",
+        url: "https://yuvinalis.com/blog",
+        siteName: "Yuvinalis Tourism",
+        images: [
+            {
+                url: "https://yuvinalis.com/images/hero-new.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Yuvinalis Tourism Blog - Travel and Visa Guides",
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Travel & Visa Guides | Yuvinalis Tourism Blog",
+        description: "Fresh visa checklists, travel itineraries, and on-the-ground advice from our Dubai team.",
+        images: ["https://yuvinalis.com/images/hero-new.jpg"],
+    },
+    alternates: {
+        canonical: "https://yuvinalis.com/blog",
+    },
+};
 
 type BlogCard = {
     _id: string;

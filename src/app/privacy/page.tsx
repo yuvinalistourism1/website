@@ -1,9 +1,16 @@
-"use client";
-
+import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Shield } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: "Privacy Policy | Yuvinalis Tourism",
+    description: "Learn how Yuvinalis Tourism collects, uses, and protects your personal information. Our commitment to data privacy and security for all visa and travel services.",
+    alternates: {
+        canonical: "https://yuvinalis.com/privacy",
+    },
+};
 
 export default function PrivacyPage() {
     return (
