@@ -4,9 +4,8 @@ import * as React from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FadeIn } from "./animations/FadeIn";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Plane, Hotel, Map, Car, Building2, FileCheck, Briefcase, ChevronRight } from "lucide-react";
+import { Plane, Hotel, Map, Car, Building2 } from "lucide-react";
 
 const services = [
     {
@@ -71,26 +70,31 @@ export function ServicesSection() {
     const [activeIndex, setActiveIndex] = React.useState(0);
 
     return (
-        <section id="services" className="py-16 sm:py-20 md:py-24 bg-brand-cream relative overflow-hidden">
+        <section id="services" className="py-16 sm:py-20 md:py-24 bg-brand-dark relative overflow-hidden">
             {/* Decorative Background Elements */}
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-gold/5 -skew-x-12 translate-x-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-blue/10 to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className="mb-12 sm:mb-16 md:mb-20">
+                <div className="mb-16 sm:mb-20 md:mb-24">
                     <FadeIn>
-                        <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-4 block">
+                        <span className="text-[10px] uppercase tracking-[0.5em] text-brand-gold font-bold mb-6 block pb-3 border-b border-brand-gold/30 w-fit">
                             Elite Offerings
                         </span>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif italic text-brand-dark">
-                            Comprehensive <br /> Concierge Services
-                        </h2>
+                        <div className="flex flex-col gap-2">
+                            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif italic text-white">
+                                Comprehensive
+                            </h2>
+                            <h3 className="text-2xl sm:text-3xl md:text-4xl uppercase font-bold tracking-tight text-white/80">
+                                Concierge Services
+                            </h3>
+                        </div>
                     </FadeIn>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-16 items-start">
-                    {/* Left Column: Service Selection */}
-                    <div className="md:col-span-2 lg:col-span-5 flex flex-col gap-3 sm:gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                    {/* Left Column: Service Navigation */}
+                    <div className="lg:col-span-4 flex flex-col gap-3">
                         {services.map((service, index) => {
                             const isActive = activeIndex === index;
                             return (
@@ -98,107 +102,108 @@ export function ServicesSection() {
                                     <button
                                         onClick={() => setActiveIndex(index)}
                                         className={cn(
-                                            "w-full flex items-start sm:items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg sm:rounded-xl text-left transition-all duration-300 group border border-transparent",
+                                            "w-full flex items-center gap-4 p-4 sm:p-5 rounded-xl text-left transition-all duration-300 group relative",
                                             isActive
-                                                ? "bg-white shadow-lg border-brand-gold/20 scale-[1.02]"
-                                                : "hover:bg-white/50 hover:pl-6 border-brand-blue/5"
+                                                ? "bg-white/15 backdrop-blur-sm border border-brand-gold/40 shadow-lg"
+                                                : "bg-transparent border border-white/5 hover:bg-white/5 hover:border-white/10"
                                         )}
                                     >
                                         <div className={cn(
-                                            "w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-colors duration-300 shrink-0",
-                                            isActive ? "bg-brand-gold text-brand-dark" : "bg-brand-dark/5 text-brand-dark/60 group-hover:bg-brand-gold/20 group-hover:text-brand-dark"
+                                            "w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 shrink-0",
+                                            isActive 
+                                                ? "bg-brand-gold text-brand-dark shadow-lg scale-110" 
+                                                : "bg-white/10 text-white group-hover:bg-brand-gold/30"
                                         )}>
-                                            <service.icon className="w-4 sm:w-5 h-4 sm:h-5" />
+                                            <service.icon className="w-6 h-6" />
                                         </div>
-                                        <div className="flex-1 min-w-0">
-                                            <h3 className={cn(
-                                                "font-bold uppercase tracking-wider text-[10px] sm:text-xs mb-1 transition-colors line-clamp-1",
-                                                isActive ? "text-brand-gold" : "text-brand-blue/40"
+                                        <div className="flex-1">
+                                            <h4 className={cn(
+                                                "font-bold uppercase tracking-wider text-xs mb-1 transition-colors",
+                                                isActive ? "text-brand-gold" : "text-white/50"
                                             )}>
                                                 {service.subtitle}
-                                            </h3>
+                                            </h4>
                                             <span className={cn(
-                                                "text-sm sm:text-lg font-serif italic transition-colors block line-clamp-2",
-                                                isActive ? "text-brand-dark" : "text-brand-dark/60"
+                                                "text-sm font-semibold transition-colors block",
+                                                isActive ? "text-white" : "text-white/70"
                                             )}>
                                                 {service.title}
                                             </span>
                                         </div>
-                                        <ChevronRight className={cn(
-                                            "w-4 h-4 transition-all duration-300",
-                                            isActive ? "text-brand-gold opacity-100 translate-x-0" : "opacity-0 -translate-x-4 group-hover:opacity-50 group-hover:-translate-x-2"
-                                        )} />
+                                        {isActive && (
+                                            <div className="absolute right-4 w-1 h-6 bg-brand-gold rounded-full" />
+                                        )}
                                     </button>
                                 </FadeIn>
                             );
                         })}
                     </div>
 
-                    {/* Right Column: Content Preview */}
-                    <div className="md:col-span-2 lg:col-span-7 relative min-h-[350px] sm:min-h-[450px] md:min-h-[500px]">
+                    {/* Right Column: Content & Image Preview */}
+                    <div className="lg:col-span-8 relative">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeIndex}
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: -20 }}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
                                 transition={{ duration: 0.4, ease: "easeOut" }}
-                                className="h-full"
+                                className="space-y-8"
                             >
-                                <div className="bg-white p-2 rounded-3xl shadow-2xl border border-brand-blue/5">
-                                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl mb-8">
-                                        <Image
-                                            src={services[activeIndex].image}
-                                            alt={services[activeIndex].title}
-                                            fill
-                                            className="object-cover"
-                                            priority
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent opacity-60" />
-                                    </div>
+                                {/* Featured Image */}
+                                <div className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                                    <Image
+                                        src={services[activeIndex].image}
+                                        alt={services[activeIndex].displayTitle}
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
+                                </div>
 
-                                    <div className="px-6 pb-6 md:px-10 md:pb-10">
-                                        <h3 className="text-3xl font-serif italic text-brand-dark mb-6">
-                                            {services[activeIndex].title}
+                                {/* Content Section */}
+                                <div className="space-y-6">
+                                    <div>
+                                        <h3 className="text-3xl sm:text-4xl font-serif italic text-brand-gold mb-4">
+                                            {services[activeIndex].displayTitle}
                                         </h3>
-                                        <p className="text-brand-blue/60 leading-relaxed mb-8 text-lg font-light">
+                                        <p className="text-white/70 leading-relaxed text-base sm:text-lg font-light">
                                             {services[activeIndex].description}
                                         </p>
-
-                                        <div className="space-y-3">
-                                            {services[activeIndex].bullets.map((bullet, i) => (
-                                                <div key={i} className="flex items-center gap-3">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
-                                                    <span className="text-sm font-bold uppercase tracking-widest text-brand-dark/80">
-                                                        {bullet}
-                                                    </span>
-                                                </div>
-                                            ))}
-                                        </div>
                                     </div>
+
+                                    {/* Feature Bullets */}
+                                    <div className="flex flex-col gap-3">
+                                        {services[activeIndex].bullets.map((bullet, i) => (
+                                            <div key={i} className="flex items-center gap-3 group">
+                                                <div className="w-2 h-2 rounded-full bg-brand-gold transition-all group-hover:scale-150" />
+                                                <span className="text-sm font-bold uppercase tracking-widest text-white/80">
+                                                    {bullet}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Tagline */}
+                                    <div className="pt-4 border-t border-white/10">
+                                        <p className="text-xs sm:text-sm uppercase tracking-widest text-brand-gold/80 font-semibold">
+                                            {services[activeIndex].tagline}
+                                        </p>
+                                    </div>
+
+                                    {/* Learn More Link */}
+                                    <button className="flex items-center gap-3 group pt-2">
+                                        <span className="text-sm font-bold uppercase tracking-[0.2em] text-white group-hover:text-brand-gold transition-colors">
+                                            Learn More
+                                        </span>
+                                        <div className="w-8 h-px bg-white/30 group-hover:bg-brand-gold transition-colors" />
+                                    </button>
                                 </div>
                             </motion.div>
                         </AnimatePresence>
                     </div>
                 </div>
-
-                {/* Shared CTA at Bottom */}
-                <FadeIn delay={0.5} yOffset={20} className="mt-20 flex flex-col sm:flex-row gap-4 justify-center items-center border-t border-brand-blue/10 pt-12">
-                    <p className="text-brand-blue/60 italic mr-4 hidden md:block">
-                        Ready to book one of these services?
-                    </p>
-                    <Button
-                        data-tally-open="ZjoraV"
-                        data-tally-layout="modal"
-                        data-tally-width="700"
-                        data-tally-auto-close="5000"
-                        data-tally-emoji-text="👋"
-                        data-tally-emoji-animation="wave"
-                        className="w-full sm:w-auto bg-brand-gold text-brand-dark hover:bg-white border border-transparent hover:border-brand-gold transition-all duration-500 font-bold uppercase tracking-widest text-[10px] h-12 px-8 rounded-full shadow-lg"
-                    >
-                        Request a Quote
-                    </Button>
-                </FadeIn>
             </div>
         </section>
     );
