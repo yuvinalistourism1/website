@@ -71,7 +71,8 @@ const config: Config = {
                 'reveal': 'reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
                 'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                 'accordion-down': 'accordion-down 0.2s ease-out',
-                'accordion-up': 'accordion-up 0.2s ease-out'
+                'accordion-up': 'accordion-up 0.2s ease-out',
+                marquee: 'marquee var(--duration) linear infinite'
             },
             keyframes: {
                 reveal: {
@@ -93,7 +94,14 @@ const config: Config = {
                     to: {
                         height: '0'
                     }
+                },
+                marquee: {
+                    from: { transform: 'translateX(0)' },
+                    to: { transform: 'translateX(calc(-100% - var(--gap)))' }
                 }
+            },
+            maxWidth: {
+                container: '1280px'
             }
         }
     },

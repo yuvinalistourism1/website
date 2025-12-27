@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import { FadeIn } from "./animations/FadeIn";
-import { Button } from "@/components/ui/button";
 import {
     Accordion,
     AccordionContent,
@@ -13,50 +11,75 @@ import {
 const faqs = [
     {
         question: "Do you guarantee visa approvals?",
-        answer: "No. Final decisions are made by the relevant authorities. We help you prepare and submit correctly to maximize your chances of approval."
+        answer: "No—final decisions are made by the relevant embassies. We prepare your file properly and guide you to maximize approval odds."
     },
     {
-        question: "What details do you need to start?",
-        answer: "Your destination, travel dates, and the service you need. If it’s visa-related, we’ll also ask your nationality and residency status."
+        question: "How long do applications usually take?",
+        answer: "Most visas are submitted within 24–72 hours once documents are complete. Embassy processing times vary by destination and season."
     },
     {
-        question: "Can you handle flights, hotels, and transfers too?",
-        answer: "Yes. We can manage the full trip end-to-end, ensuring all bookings align with your visa validity and travel schedule."
+        question: "What documents do you need from me?",
+        answer: "Passport copy, recent photo, travel dates, and proof of residency. Some destinations also require bank statements, HR letters, or prior visas."
     },
     {
-        question: "Do you offer tours and sightseeing?",
-        answer: "Yes. We arrange popular experiences and can build a simple itinerary tailored to your interests and time."
+        question: "Can you fast-track or rush a request?",
+        answer: "We prioritize urgent cases and can arrange expedited appointments where available. Lead times still depend on embassy capacity."
     },
     {
-        question: "How do payments work?",
-        answer: "We share the total cost and what it covers before you confirm. We believe in transparency with no hidden fees."
+        question: "Do you handle flights, hotels, and insurance?",
+        answer: "Yes. We align bookings to visa validity, include cancellable options when possible, and can add travel insurance on request."
+    },
+    {
+        question: "Can you customize tours and excursions?",
+        answer: "Absolutely. Safaris, city breaks, layover tours, and private guides can be tailored to your budget and timeline."
+    },
+    {
+        question: "How do payments and refunds work?",
+        answer: "We share a clear cost breakdown before you approve. Some fees are non-refundable once appointments or tickets are issued."
+    },
+    {
+        question: "Do you support groups or corporate travel?",
+        answer: "Yes. We manage group submissions, coordinate documents for teams, and keep everyone aligned on timelines."
+    },
+    {
+        question: "Can you assist after booking is confirmed?",
+        answer: "We can reschedule where policies allow, update itineraries, and re-issue supporting documents if plans shift."
+    },
+    {
+        question: "How do we stay in touch?",
+        answer: "We respond fastest on WhatsApp and email, with status updates at key milestones so you always know next steps."
     }
 ];
 
 export function FAQ() {
     return (
         <section className="py-16 sm:py-20 md:py-24 bg-brand-cream" id="faq">
-            <div className="container mx-auto px-4 max-w-4xl">
+            <div className="container mx-auto px-4 max-w-5xl">
                 <div className="text-center mb-12 sm:mb-16">
                     <FadeIn>
                         <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-4 block">
                             FAQs
                         </span>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif italic text-brand-dark mb-4 sm:mb-6">
-                            Quick answers
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif italic text-brand-dark mb-3 sm:mb-4">
+                            Questions we hear most
                         </h2>
+                        <p className="text-base sm:text-lg text-brand-blue/70 max-w-2xl mx-auto">
+                            A concise guide to how we handle visas, trips, and support -- no fluff, just the essentials travelers ask us daily.
+                        </p>
                     </FadeIn>
                 </div>
-
-                <div className="mb-12 sm:mb-16">
+                <div className="mb-4 sm:mb-6">
                     <Accordion type="single" collapsible className="w-full">
                         {faqs.map((faq, index) => (
-                            <FadeIn key={index} delay={index * 0.1}>
-                                <AccordionItem value={`item-${index}`} className="border-b border-brand-blue/10 mb-2 sm:mb-4 bg-white/50 rounded-lg sm:rounded-2xl px-4 sm:px-6 border-none shadow-sm">
-                                    <AccordionTrigger className="text-base sm:text-lg md:text-xl font-serif text-brand-dark hover:text-brand-gold hover:no-underline py-4 sm:py-6">
+                            <FadeIn key={index} delay={index * 0.08}>
+                                <AccordionItem
+                                    value={`item-${index}`}
+                                    className="mb-3 sm:mb-4 rounded-xl sm:rounded-2xl bg-white/60 shadow-sm border border-brand-blue/5"
+                                >
+                                    <AccordionTrigger className="text-base sm:text-lg md:text-xl font-serif text-brand-dark hover:text-brand-gold hover:no-underline px-4 sm:px-6 py-4 sm:py-5">
                                         {faq.question}
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-brand-blue/60 leading-relaxed text-sm sm:text-base pb-4 sm:pb-6">
+                                    <AccordionContent className="text-brand-blue/70 leading-relaxed text-sm sm:text-base px-4 sm:px-6 pb-4 sm:pb-6">
                                         {faq.answer}
                                     </AccordionContent>
                                 </AccordionItem>
@@ -64,29 +87,6 @@ export function FAQ() {
                         ))}
                     </Accordion>
                 </div>
-
-                <FadeIn delay={0.6} yOffset={20} className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full">
-                    <Button
-                        data-tally-open="ZjoraV"
-                        data-tally-layout="modal"
-                        data-tally-width="700"
-                        data-tally-auto-close="5000"
-                        data-tally-emoji-text="👋"
-                        data-tally-emoji-animation="wave"
-                        className="bg-brand-gold text-brand-dark hover:bg-white border border-transparent hover:border-brand-gold transition-all duration-500 font-bold uppercase tracking-widest text-[10px] h-14 px-10 rounded-full shadow-lg"
-                    >
-                        Request a Quote / Checklist
-                    </Button>
-                    <Button
-                        variant="outline"
-                        className="text-brand-dark border-brand-blue/20 hover:bg-brand-dark hover:text-white h-14 px-10 rounded-full font-bold uppercase tracking-widest text-[10px] bg-transparent"
-                        asChild
-                    >
-                        <Link href="https://wa.me/971561510931" target="_blank">
-                            WhatsApp Us
-                        </Link>
-                    </Button>
-                </FadeIn>
             </div>
         </section>
     );
