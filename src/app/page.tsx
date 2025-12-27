@@ -1,56 +1,32 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { FeatureSection } from "@/components/FeatureSection";
-import { Testimonials } from "@/components/Testimonials"; // NEW
-import { Packages } from "@/components/Packages";
-import { ExperienceSlider } from "@/components/ExperienceSlider";
-import { BlogPreview } from "@/components/BlogPreview"; // NEW
-import { FAQ } from "@/components/FAQ"; // NEW
-import { ServicesTab } from "@/components/ServicesTab";
+import { TrustBar } from "@/components/TrustBar";
+import { ServicesSection } from "@/components/ServicesSection";
+import { VisasSection } from "@/components/VisasSection";
+import { WhoWeAre } from "@/components/WhoWeAre";
+import { HowItWorks } from "@/components/HowItWorks";
+import { ToursSection } from "@/components/ToursSection";
+import { Reviews } from "@/components/Reviews";
+import { BlogTeaser } from "@/components/BlogTeaser";
+import { FAQ } from "@/components/FAQ";
+import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 
-import { client } from "@/sanity/lib/client";
-
-export default async function Home() {
-  const [tours, testimonialsData, destinations] = await Promise.all([
-    client.fetch(`*[_type == "tour"]{
-      title,
-      price,
-      image,
-      duration,
-      description,
-      featured
-    }`),
-    client.fetch(`*[_type == "testimonial"]{
-      author,
-      role,
-      content,
-      rating,
-      avatar
-    }`),
-    client.fetch(`*[_type == "destination"]{
-      name,
-      description,
-      image,
-      featured
-    }`)
-  ]);
-
+export default function Home() {
   return (
     <main className="min-h-screen bg-brand-cream font-sans antialiased text-brand-dark selection:bg-brand-gold selection:text-brand-blue">
       <Navbar />
       <Hero />
-      <FeatureSection />
-      <div className="bg-white">
-        <Testimonials testimonials={testimonialsData.length > 0 ? testimonialsData : undefined} />
-      </div>
-      <ServicesTab />
-      <div className="bg-white">
-        <Packages tours={tours.length > 0 ? tours : undefined} />
-      </div>
-      <ExperienceSlider destinations={destinations.length > 0 ? destinations : undefined} />
-      <BlogPreview />
+      <TrustBar />
+      <ServicesSection />
+      <VisasSection />
+      <WhoWeAre />
+      <HowItWorks />
+      <ToursSection />
+      <Reviews />
+      <BlogTeaser />
       <FAQ />
+      <FinalCTA />
       <Footer />
     </main>
   );

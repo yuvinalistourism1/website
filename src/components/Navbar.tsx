@@ -14,11 +14,11 @@ import {
 } from "@/components/ui/sheet";
 
 const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Destinations", href: "#" },
-    { name: "Experiences", href: "#" },
-    { name: "Packages", href: "#" },
-    { name: "About", href: "#" },
+    { name: "Visas", href: "#visas" },
+    { name: "Travel Services", href: "#services" },
+    { name: "Tours", href: "#tours" },
+    { name: "Blog", href: "#blog" },
+    { name: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -68,7 +68,7 @@ export function Navbar() {
                             Yuvinalis
                         </span>
                         <span className="text-[8px] uppercase tracking-[0.4em] text-white opacity-60 font-bold group-hover:text-brand-gold transition-colors">
-                            Tourism Dubai
+                            Tourism
                         </span>
                     </div>
                 </Link>
@@ -85,9 +85,25 @@ export function Navbar() {
                             <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-brand-gold transition-all duration-500 group-hover:w-full" />
                         </Link>
                     ))}
-                    <Button className="bg-brand-gold text-brand-dark hover:bg-white transition-all duration-500 font-bold uppercase tracking-widest text-[10px] h-10 px-8 rounded-full shadow-lg">
-                        Plan Journey
-                    </Button>
+                    <div className="flex items-center gap-4">
+                        <Button
+                            variant="outline"
+                            className="hidden xl:flex text-white border-white/20 hover:bg-white hover:text-brand-dark rounded-full h-10 px-6 text-[10px] font-bold uppercase tracking-widest transition-all"
+                            asChild
+                        >
+                            <Link href="https://wa.me/971561510931" target="_blank">
+                                WhatsApp Us
+                            </Link>
+                        </Button>
+                        <Button
+                            data-tally-open="w4K00W"
+                            data-tally-emoji-text="👋"
+                            data-tally-emoji-animation="wave"
+                            className="bg-brand-gold text-brand-dark hover:bg-white transition-all duration-500 font-bold uppercase tracking-widest text-[10px] h-10 px-8 rounded-full shadow-lg"
+                        >
+                            Request a Quote
+                        </Button>
+                    </div>
                 </div>
 
                 {/* Mobile Navigation */}
@@ -111,9 +127,25 @@ export function Navbar() {
                                         <ChevronRight className="w-5 h-5 opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all text-brand-gold" />
                                     </Link>
                                 ))}
-                                <Button className="mt-8 bg-brand-gold text-brand-dark hover:bg-white h-14 rounded-full font-bold uppercase tracking-widest text-[10px]">
-                                    Enquire Now
-                                </Button>
+                                <div className="flex flex-col gap-4 mt-8">
+                                    <Button
+                                        data-tally-open="w4K00W"
+                                        data-tally-emoji-text="👋"
+                                        data-tally-emoji-animation="wave"
+                                        className="bg-brand-gold text-brand-dark hover:bg-white h-14 rounded-full font-bold uppercase tracking-widest text-[10px]"
+                                    >
+                                        Request a Quote
+                                    </Button>
+                                    <Button
+                                        variant="outline"
+                                        className="text-white border-white/20 hover:bg-white hover:text-brand-dark h-14 rounded-full font-bold uppercase tracking-widest text-[10px]"
+                                        asChild
+                                    >
+                                        <Link href="https://wa.me/971561510931" target="_blank">
+                                            WhatsApp Us
+                                        </Link>
+                                    </Button>
+                                </div>
                             </div>
                         </SheetContent>
                     </Sheet>

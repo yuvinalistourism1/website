@@ -41,7 +41,7 @@ export function Footer() {
                                         Yuvinalis
                                     </span>
                                     <span className="text-[8px] uppercase tracking-[0.4em] text-white opacity-60 font-bold group-hover:text-brand-gold transition-colors">
-                                        Tourism Dubai
+                                        Tourism
                                     </span>
                                 </div>
                             </Link>
@@ -112,11 +112,11 @@ export function Footer() {
                     </div>
 
                     <div className="lg:col-span-3">
-                        <h5 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-gold mb-8">Company</h5>
+                        <h5 className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-gold mb-8">Quick Links</h5>
                         <ul className="space-y-4">
-                            {["Our Story", "Ambassadors", "Impact", "Partners"].map((item) => (
+                            {["Blog", "Contact"].map((item) => (
                                 <li key={item}>
-                                    <Link href="#" className="text-white/60 hover:text-brand-gold transition-colors duration-300 flex items-center gap-2 group">
+                                    <Link href={item === "Blog" ? "#blog" : "/contact"} className="text-white/60 hover:text-brand-gold transition-colors duration-300 flex items-center gap-2 group">
                                         <span className="text-sm font-light italic">{item}</span>
                                         <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
                                     </Link>
@@ -130,9 +130,16 @@ export function Footer() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="flex gap-4">
                                 <MapPin className="w-5 h-5 text-brand-gold shrink-0" />
-                                <p className="text-sm text-white/60 font-light leading-relaxed italic">
-                                    Office 727, Centurion Star Tower B<br />Dubai, United Arab Emirates
-                                </p>
+                                <div className="space-y-4">
+                                    <p className="text-sm text-white/60 font-light leading-relaxed italic">
+                                        <strong className="block text-white not-italic mb-1">Dubai (Main Office)</strong>
+                                        Office 727, Centurion Star Tower B<br />Dubai, United Arab Emirates
+                                    </p>
+                                    <p className="text-sm text-white/60 font-light leading-relaxed italic">
+                                        <strong className="block text-white not-italic mb-1">Nairobi (Kenya Branch)</strong>
+                                        Westlands, Nairobi<br />Kenya
+                                    </p>
+                                </div>
                             </div>
                             <div className="space-y-4">
                                 <div className="flex items-center gap-4">
@@ -154,8 +161,8 @@ export function Footer() {
                         &copy; {currentYear} Yuvinalis Tourism. All Rights Reserved.
                     </p>
                     <div className="flex gap-12">
-                        {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((item) => (
-                            <Link key={item} href="#" className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/20 hover:text-brand-gold transition-colors">
+                        {["Privacy Policy", "Terms of Service", "Cookie Policy", "refunds"].map((item) => (
+                            <Link key={item} href={`/${item.toLowerCase().replace(/ /g, "-")}`} className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/20 hover:text-brand-gold transition-colors">
                                 {item}
                             </Link>
                         ))}

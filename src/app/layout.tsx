@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Mulish, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 const mulish = Mulish({
   subsets: ["latin"],
@@ -39,7 +40,9 @@ export default function RootLayout({
       <body
         className={`${mulish.variable} ${playfair.variable} font-sans text-brand-blue bg-brand-cream antialiased overflow-x-hidden`}
       >
+        <script async src="https://tally.so/widgets/embed.js"></script>
         {children}
+        <FloatingWhatsApp />
       </body>
     </html>
   );
