@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
         className={`${mulish.variable} ${playfair.variable} font-sans text-brand-blue bg-brand-cream antialiased overflow-x-hidden`}
       >

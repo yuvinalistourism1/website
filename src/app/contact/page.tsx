@@ -31,7 +31,10 @@ export default function ContactPage() {
 
                     <FadeIn delay={0.2} yOffset={20} className="flex flex-col md:flex-row gap-6 justify-center items-center">
                         <Button
-                            data-tally-open="w4K00W"
+                            data-tally-open="ZjoraV"
+                            data-tally-layout="modal"
+                            data-tally-width="700"
+                            data-tally-auto-close="5000"
                             data-tally-emoji-text="👋"
                             data-tally-emoji-animation="wave"
                             className="bg-brand-gold text-brand-dark hover:bg-white transition-all duration-500 font-bold uppercase tracking-widest text-[10px] h-14 px-10 rounded-full shadow-lg"

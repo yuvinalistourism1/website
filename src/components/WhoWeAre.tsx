@@ -17,7 +17,7 @@ export function WhoWeAre() {
 
                     {/* Visuals Column (Left) */}
                     <FadeIn className="relative">
-                        <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                        <div className="relative aspect-[4/2.5] w-full max-w-md mx-auto lg:max-w-none rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                             <Image
                                 src="/images/safari-car.jpg"
                                 alt="Desert Safari Experience"
@@ -28,7 +28,7 @@ export function WhoWeAre() {
                         </div>
 
                         {/* Floating Image */}
-                        <div className="absolute -bottom-10 -right-4 md:-right-10 w-1/2 aspect-square rounded-2xl overflow-hidden border-4 border-brand-dark shadow-2xl hidden sm:block">
+                        <div className="absolute -bottom-10 -right-4 md:-right-10 w-1/2 aspect-[1/0.5] rounded-2xl overflow-hidden border-4 border-brand-dark shadow-2xl hidden sm:block">
                             <Image
                                 src="/images/safari-tent.jpg"
                                 alt="Luxury Camping"

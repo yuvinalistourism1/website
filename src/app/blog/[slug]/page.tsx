@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
+export default function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
     // In a real app we'd fetch data based on slug.
     const { slug } = React.use(params);
 

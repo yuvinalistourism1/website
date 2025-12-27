@@ -57,8 +57,8 @@ export function Navbar() {
         >
             <nav className="relative w-full px-3 sm:px-4 md:px-8 h-14 sm:h-16 md:h-20 grid grid-cols-12 items-center">
                 <div className="col-span-2 lg:col-span-3 flex justify-start">
-                    <Link href="/" className="group flex items-center gap-3">
-                        <div className="relative w-8 h-8 md:w-10 md:h-10 overflow-hidden rounded-full border border-brand-gold/50 group-hover:border-brand-gold transition-colors">
+                    <Link href="/" className="group flex items-center gap-2 md:gap-3">
+                        <div className="relative w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0 rounded-full overflow-hidden border border-brand-gold/50 group-hover:border-brand-gold transition-colors">
                             <Image
                                 src="/logo.jpg"
                                 alt="Yuvinalis Tourism Logo"
@@ -66,11 +66,9 @@ export function Navbar() {
                                 className="object-cover"
                             />
                         </div>
-                        <div className="flex flex-col">
-                            <span className="text-base md:text-lg font-serif italic text-white group-hover:text-brand-gold transition-colors tracking-tighter leading-none">
-                                Yuvinalis Tourism
-                            </span>
-                        </div>
+                        <span className="hidden sm:block text-sm md:text-base font-serif italic text-white group-hover:text-brand-gold transition-colors tracking-tighter whitespace-nowrap">
+                            Yuvinalis Tourism
+                        </span>
                     </Link>
                 </div>
 

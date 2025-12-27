@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { FadeIn } from "./animations/FadeIn";
 import { Button } from "@/components/ui/button";
 
@@ -8,8 +9,15 @@ export function FinalCTA() {
     return (
         <section className="py-32 bg-brand-dark text-center relative overflow-hidden">
             {/* Background Decoration */}
-            <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-brand-gold/10 to-transparent pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-1/2 h-full bg-brand-blue/5 blur-3xl pointer-events-none" />
+            <div className="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
+                <Image
+                    src="/images/Dark Premium Abstract Background (for sectionsCTA strips).png"
+                    alt="Abstract Background"
+                    fill
+                    className="object-cover"
+                />
+            </div>
+            <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-tr from-brand-gold/10 to-transparent pointer-events-none z-0" />
 
             <div className="container mx-auto px-4 relative z-10">
                 <FadeIn>
@@ -26,7 +34,10 @@ export function FinalCTA() {
 
                 <FadeIn delay={0.2} yOffset={20} className="flex flex-col md:flex-row gap-8 justify-center items-center">
                     <Button
-                        data-tally-open="w4K00W"
+                        data-tally-open="ZjoraV"
+                        data-tally-layout="modal"
+                        data-tally-width="700"
+                        data-tally-auto-close="5000"
                         data-tally-emoji-text="👋"
                         data-tally-emoji-animation="wave"
                         className="bg-brand-gold text-brand-dark hover:bg-white transition-all duration-500 font-bold uppercase tracking-widest text-xs h-16 px-12 rounded-full shadow-2xl scale-100 hover:scale-105"
