@@ -56,7 +56,7 @@ export default async function BlogPage() {
         <main className="min-h-screen bg-brand-cream font-sans antialiased text-brand-dark">
             <Navbar />
 
-            <section className="pt-44 md:pt-52 pb-14 px-4 bg-brand-dark text-white relative overflow-hidden">
+            <section className="pt-44 md:pt-52 pb-14 bg-brand-dark text-white relative overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.08] pointer-events-none"
                     style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #f6c453 1px, transparent 0)', backgroundSize: '42px 42px' }}
                 />

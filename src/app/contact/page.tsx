@@ -12,11 +12,11 @@ export default function ContactPage() {
         <main className="min-h-screen bg-brand-cream font-sans antialiased text-brand-dark selection:bg-brand-gold selection:text-brand-blue">
             <Navbar />
 
-            <section className="pt-48 pb-24 px-4 bg-brand-dark text-white relative overflow-hidden">
+            <section className="pt-48 pb-24 bg-brand-dark text-white relative overflow-hidden">
                 {/* Background Decoration */}
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-gold/5 blur-[100px] rounded-full pointer-events-none" />
 
-                <div className="container mx-auto max-w-4xl relative z-10 text-center">
+                <div className="container mx-auto px-6 md:px-8 max-w-4xl relative z-10 text-center">
                     <FadeIn>
                         <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-6 block">
                             Contact
@@ -54,8 +54,8 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            <section className="py-24 bg-brand-cream">
-                <div className="container mx-auto px-4 max-w-6xl">
+            <section className="py-20 md:py-28 bg-brand-cream">
+                <div className="container mx-auto px-6 md:px-8 max-w-6xl">
                     <FadeIn delay={0.3}>
                         <h2 className="text-4xl font-serif italic text-brand-dark mb-4 text-center">Our Offices</h2>
                         <p className="text-brand-blue/60 text-center max-w-2xl mx-auto mb-16">Visit us or reach out via WhatsApp for immediate assistance</p>
@@ -170,8 +170,8 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="text-xl font-serif italic text-brand-dark mb-3">Office Hours</h3>
                                         <p className="text-brand-blue/60 leading-relaxed text-sm">
-                                            Monday - Saturday: 9:00 AM - 7:00 PM<br />
-                                            Sunday: Closed
+                                            Monday - Friday: 9:00 AM - 8:00 PM<br />
+                                            Saturday - Sunday: 9:00 AM - 7:00 PM
                                         </p>
                                     </div>
                                 </div>

@@ -53,7 +53,7 @@ export function Navbar() {
                 borderColor: borderOpacity,
                 y: useTransform(scrollY, [0, 100], [0, -10]),
             }}
-            className="fixed top-2 sm:top-4 inset-x-0 mx-auto w-[98%] sm:w-[95%] max-w-[1400px] z-50 transition-all duration-300 rounded-full"
+            className="fixed top-2 sm:top-4 inset-x-0 mx-auto w-[98%] sm:w-[95%] max-w-[1400px] z-50 transition-all duration-300 rounded-2xl sm:rounded-full"
         >
             <nav className="relative w-full px-3 sm:px-4 md:px-8 h-14 sm:h-16 md:h-20 grid grid-cols-12 items-center">
                 <div className="col-span-2 lg:col-span-3 flex justify-start">
@@ -144,13 +144,13 @@ export function Navbar() {
                                         data-tally-auto-close="5000"
                                         data-tally-emoji-text="👋"
                                         data-tally-emoji-animation="wave"
-                                        className="bg-brand-gold text-brand-dark hover:bg-white h-12 sm:h-14 rounded-full font-bold uppercase tracking-widest text-[10px]"
+                                        className="bg-brand-gold text-brand-dark hover:bg-white h-14 px-10 rounded-full font-bold uppercase tracking-widest text-[10px]"
                                     >
                                         Request a Quote
                                     </Button>
                                     <Button
                                         variant="outline"
-                                        className="text-white border-white/20 hover:bg-white hover:text-brand-dark h-12 sm:h-14 rounded-full font-bold uppercase tracking-widest text-[10px]"
+                                        className="text-white border-white/20 hover:bg-white hover:text-brand-dark h-14 px-10 rounded-full font-bold uppercase tracking-widest text-[10px]"
                                         asChild
                                     >
                                         <Link href="https://wa.me/971561510931" target="_blank">

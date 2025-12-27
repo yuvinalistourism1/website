@@ -53,9 +53,9 @@ const faqs = [
 
 export function FAQ() {
     return (
-        <section className="py-16 sm:py-20 md:py-24 bg-brand-cream" id="faq">
-            <div className="container mx-auto px-4 max-w-5xl">
-                <div className="text-center mb-12 sm:mb-16">
+        <section className="py-20 md:py-28 bg-brand-cream" id="faq">
+            <div className="container mx-auto px-6 md:px-8 max-w-5xl">
+                <div className="text-left md:text-center mb-12 sm:mb-16">
                     <FadeIn>
                         <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-4 block">
                             FAQs
@@ -63,7 +63,7 @@ export function FAQ() {
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif italic text-brand-dark mb-3 sm:mb-4">
                             Questions we hear most
                         </h2>
-                        <p className="text-base sm:text-lg text-brand-blue/70 max-w-2xl mx-auto">
+                        <p className="text-base sm:text-lg text-brand-blue/70 max-w-2xl md:mx-auto">
                             A concise guide to how we handle visas, trips, and support -- no fluff, just the essentials travelers ask us daily.
                         </p>
                     </FadeIn>
@@ -76,10 +76,10 @@ export function FAQ() {
                                     value={`item-${index}`}
                                     className="mb-3 sm:mb-4 rounded-xl sm:rounded-2xl bg-white/60 shadow-sm border border-brand-blue/5"
                                 >
-                                    <AccordionTrigger className="text-base sm:text-lg md:text-xl font-serif text-brand-dark hover:text-brand-gold hover:no-underline px-4 sm:px-6 py-4 sm:py-5">
+                                    <AccordionTrigger className="text-left text-base sm:text-lg md:text-xl font-serif text-brand-dark hover:text-brand-gold hover:no-underline px-4 sm:px-6 py-4 sm:py-5">
                                         {faq.question}
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-brand-blue/70 leading-relaxed text-sm sm:text-base px-4 sm:px-6 pb-4 sm:pb-6">
+                                    <AccordionContent className="text-left text-brand-blue/70 leading-relaxed text-sm sm:text-base px-4 sm:px-6 pb-4 sm:pb-6">
                                         {faq.answer}
                                     </AccordionContent>
                                 </AccordionItem>

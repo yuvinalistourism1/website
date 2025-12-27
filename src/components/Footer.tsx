@@ -24,7 +24,7 @@ export function Footer() {
             <div className="absolute top-20 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-20 left-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="container mx-auto px-6 md:px-8 max-w-7xl relative z-10">
                 {/* Main Footer Content */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 py-16 md:py-20 lg:py-24">
                     {/* Brand Column */}

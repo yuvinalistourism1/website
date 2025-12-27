@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export function VisasSection() {
     return (
-        <section id="visas" className="py-16 sm:py-20 md:py-24 bg-white relative overflow-hidden">
+        <section id="visas" className="py-20 md:py-28 bg-white relative overflow-hidden">
             {/* Background Decoration */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-cream/50 skew-x-12 translate-x-1/2 pointer-events-none" />
             <div className="absolute inset-0 z-0 opacity-5">
@@ -19,7 +19,7 @@ export function VisasSection() {
                 />
             </div>
 
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="container mx-auto px-6 md:px-8 max-w-7xl relative z-10">
                 <div className="max-w-4xl mx-auto text-center">
                     <FadeIn>
                         <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-4 block">
@@ -33,7 +33,7 @@ export function VisasSection() {
                         </p>
                     </FadeIn>
 
-                    <FadeIn delay={0.2} yOffset={20} className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full">
+                    <FadeIn delay={0.2} yOffset={20} className="flex flex-col sm:flex-row gap-2 md:gap-4 lg:gap-8 justify-center items-center w-full">
                         <Button
                             data-tally-open="ZjoraV"
                             data-tally-layout="modal"

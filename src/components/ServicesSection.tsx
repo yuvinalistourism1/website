@@ -84,31 +84,31 @@ export function ServicesSection() {
     const [activeIndex, setActiveIndex] = React.useState(0);
 
     return (
-        <section id="services" className="py-8 sm:py-12 md:py-16 bg-brand-dark relative overflow-hidden">
+        <section id="services" className="py-16 md:py-24 bg-brand-dark relative overflow-hidden">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-blue/10 to-transparent pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="mb-8 sm:mb-10 md:mb-12">
+            <div className="container mx-auto px-6 md:px-8 max-w-7xl relative z-10">
+                <div className="mb-8 sm:mb-12 md:mb-16">
                     <FadeIn>
-                        <span className="text-[12px] uppercase tracking-[0.5em] text-brand-gold font-bold mb-3 block pb-2 border-b border-brand-gold/30 w-fit">
-                            Elite Offerings
+                        <span className="text-[12px] uppercase tracking-[0.5em] text-brand-gold font-bold mb-4 block pb-2 border-b border-brand-gold/30 w-fit">
+                            Our Services
                         </span>
-                        <div className="flex flex-col gap-1">
+                        <div className="flex flex-col gap-4">
                             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif italic text-white">
                                 Comprehensive
                             </h2>
                             <h3 className="text-lg sm:text-xl md:text-2xl uppercase font-bold tracking-tight text-white/80">
-                                Concierge Services
+                                Travel Services
                             </h3>
                         </div>
                     </FadeIn>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 md:gap-16 lg:gap-28 items-center">
                     {/* Left Column: Service Navigation */}
-                    <div className="lg:col-span-3 flex flex-col gap-2">
+                    <div className="lg:col-span-4 flex flex-col gap-2">
                         {services.map((service, index) => {
                             const isActive = activeIndex === index;
                             return (
@@ -179,7 +179,7 @@ export function ServicesSection() {
                     </div>
 
                     {/* Right Column: Content Section */}
-                    <div className="lg:col-span-6">
+                    <div className="lg:col-span-5">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeIndex}

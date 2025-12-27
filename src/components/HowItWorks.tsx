@@ -35,7 +35,7 @@ const steps = [
 
 export function HowItWorks() {
     return (
-        <section className="py-20 md:py-32 bg-gradient-to-b from-brand-cream via-white to-brand-cream relative overflow-hidden">
+        <section className="py-20 md:py-28 bg-gradient-to-b from-brand-cream via-white to-brand-cream relative overflow-hidden">
             {/* Premium Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-brand-gold/5 rounded-full blur-3xl" />
@@ -43,7 +43,7 @@ export function HowItWorks() {
                 <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-brand-gold/3 rounded-full blur-3xl" />
             </div>
 
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="container mx-auto px-6 md:px-8 max-w-7xl relative z-10">
                 <div className="text-center mb-20">
                     <FadeIn>
                         <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-6 block border-b border-brand-gold/30 w-fit mx-auto pb-3">
@@ -58,7 +58,7 @@ export function HowItWorks() {
                     </FadeIn>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20 relative">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-8 mb-20 relative">
                     {/* Animated Connecting Lines */}
                     <svg className="hidden lg:block absolute top-20 left-0 w-full h-32 pointer-events-none" preserveAspectRatio="none">
                         <motion.line
@@ -154,7 +154,7 @@ export function HowItWorks() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                     viewport={{ once: true }}
-                    className="flex flex-col sm:flex-row gap-4 justify-center items-center relative z-10"
+                    className="flex flex-col sm:flex-row gap-2 md:gap-4 lg:gap-8 justify-center items-center relative z-10"
                 >
                     <Button
                         data-tally-open="ZjoraV"

@@ -7,13 +7,13 @@ import { CheckCircle2, MessageCircle } from "lucide-react";
 
 export function WhoWeAre() {
     return (
-        <section className="py-16 sm:py-20 md:py-24 bg-brand-dark relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-brand-dark relative overflow-hidden">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-blue/5 skew-x-12 translate-x-1/4 pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-24 items-center">
+            <div className="container mx-auto px-6 md:px-8 max-w-7xl relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 md:gap-16 lg:gap-28 items-center">
 
                     {/* Visuals Column (Left) */}
                     <FadeIn className="relative">
@@ -48,20 +48,20 @@ export function WhoWeAre() {
 
                     {/* Content Column (Right) */}
                     <FadeIn delay={0.2}>
-                        <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-6 block border-b border-brand-gold/30 w-fit pb-2">
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-8 block border-b border-brand-gold/30 w-fit pb-2">
                             About Yuvinalis
                         </span>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif italic text-white mb-6 sm:mb-8 leading-tight">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif italic text-white mb-8 leading-tight">
                             Who We Are
                         </h2>
 
-                        <div className="space-y-6 sm:space-y-8 text-white/70 font-light leading-relaxed text-base sm:text-lg">
+                        <div className="space-y-8 text-white/70 font-light leading-relaxed text-base sm:text-lg">
                             <p>
                                 Yuvinalis Tourism is a Dubai-based travel agency, operating for 3 years. We help clients secure visas for popular destinations, then handle the rest of the trip — flights, hotels, airport transfers, city tours, and custom itineraries.
                             </p>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-                                <div className="space-y-3">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 lg:gap-8 pt-4">
+                                <div className="space-y-4">
                                     <div className="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-2">
                                         <CheckCircle2 className="w-5 h-5" />
                                     </div>
@@ -70,7 +70,7 @@ export function WhoWeAre() {
                                         We break down complex visa steps into simple, actionable lists so you never feel lost.
                                     </p>
                                 </div>
-                                <div className="space-y-3">
+                                <div className="space-y-4">
                                     <div className="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold mb-2">
                                         <MessageCircle className="w-5 h-5" />
                                     </div>

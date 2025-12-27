@@ -58,8 +58,8 @@ export function Reviews() {
 
     if (loading) {
         return (
-            <section className="py-24 bg-brand-dark text-white overflow-hidden">
-                <div className="container mx-auto px-4">
+            <section className="py-20 md:py-28 bg-brand-dark text-white overflow-hidden">
+                <div className="container mx-auto px-6 md:px-8 max-w-7xl">
                     <div className="text-center mb-16">
                         <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-4 block">
                             Reviews
@@ -76,8 +76,8 @@ export function Reviews() {
         );
     }
     return (
-        <section className="py-24 bg-brand-dark text-white overflow-hidden">
-            <div className="container mx-auto px-4">
+        <section className="py-20 md:py-28 bg-brand-dark text-white overflow-hidden">
+            <div className="container mx-auto px-6 md:px-8 max-w-7xl">
                 <div className="text-center mb-16">
                     <FadeIn>
                         <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-4 block">
@@ -170,7 +170,7 @@ export function Reviews() {
                     </div>
                 </div>
 
-                <FadeIn delay={0.6} yOffset={20} className="flex flex-col md:flex-row gap-6 justify-center items-center mt-12">
+                <FadeIn delay={0.6} yOffset={20} className="flex flex-col md:flex-row gap-2 md:gap-4 lg:gap-8 justify-center items-center mt-12">
                     <Button
                         data-tally-open="ZjoraV"
                         data-tally-layout="modal"

@@ -35,8 +35,8 @@ const categories = [
 
 export function ToursSection() {
     return (
-        <section id="tours" className="py-16 sm:py-20 md:py-24 bg-brand-cream relative">
-            <div className="container mx-auto px-4">
+        <section id="tours" className="py-20 md:py-28 bg-brand-cream relative">
+            <div className="container mx-auto px-6 md:px-8 max-w-7xl">
                 <div className="text-center mb-12 sm:mb-16 md:mb-20">
                     <FadeIn>
                         <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-4 block">
@@ -51,7 +51,7 @@ export function ToursSection() {
                     </FadeIn>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-8 mb-12 sm:mb-16">
                     {categories.map((category, index) => (
                         <FadeIn key={index} delay={index * 0.1}>
                             <div className="group relative h-64 sm:h-72 md:h-80 rounded-2xl sm:rounded-3xl overflow-hidden cursor-pointer">
@@ -94,7 +94,7 @@ export function ToursSection() {
                     </div>
                 </FadeIn>
 
-                <FadeIn delay={0.8} yOffset={20} className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full">
+                <FadeIn delay={0.8} yOffset={20} className="flex flex-col sm:flex-row gap-2 md:gap-4 lg:gap-8 justify-center items-center w-full">
                     <Button
                         data-tally-open="ZjoraV"
                         data-tally-layout="modal"

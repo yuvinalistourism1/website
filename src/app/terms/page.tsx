@@ -258,7 +258,7 @@ export default function TermsPage() {
                     
                     <p>If you have a complaint about our services, please contact us immediately:</p>
                     <ul>
-                        <li>During your trip: Contact our 24/7 emergency line</li>
+                        <li>During your trip: Contact us via WhatsApp (Mon-Fri: 09:00-20:00, Sat-Sun: 09:00-19:00)</li>
                         <li>After your trip: Submit a written complaint within 30 days of service completion</li>
                     </ul>
                     <p>We will investigate and respond to your complaint within 14 business days.</p>

@@ -35,9 +35,9 @@ async function getRecentPosts(): Promise<BlogCard[]> {
 export async function BlogTeaser() {
     const blogPosts = await getRecentPosts();
     return (
-        <section className="py-24 bg-white">
-            <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <section className="py-20 md:py-28 bg-white">
+            <div className="container mx-auto px-6 md:px-8 max-w-7xl">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-2 md:gap-4 lg:gap-8">
                     <FadeIn>
                         <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-4 block">
                             Blog
@@ -63,7 +63,7 @@ export async function BlogTeaser() {
                     </FadeIn>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 lg:gap-8 mb-12">
                     {blogPosts.length === 0 ? (
                         <div className="col-span-3 text-center py-12">
                             <p className="text-brand-blue/60">New guides coming soon. Check back shortly.</p>

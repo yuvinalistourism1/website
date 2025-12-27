@@ -46,7 +46,7 @@ export function Hero() {
             <div className="absolute inset-0 bg-black/20 pointer-events-none" />
 
             {/* Hero Content */}
-            <motion.div style={{ opacity }} className="relative z-10 text-center text-white px-3 sm:px-4 max-w-5xl w-full pt-4 sm:pt-8 md:pt-12 pb-6 sm:pb-8 md:pb-12">
+            <motion.div style={{ opacity }} className="relative z-10 text-center text-white px-6 sm:px-8 max-w-7xl w-full pt-4 sm:pt-8 md:pt-12 pb-6 sm:pb-8 md:pb-12">
                 <FadeIn delay={0.2}>
                     <h2 className="text-[8px] sm:text-[10px] md:text-xs tracking-[0.5em] uppercase text-brand-gold font-bold mb-6 sm:mb-8 md:mb-12">
                         UAE • Schengen • China (and more)
@@ -56,7 +56,7 @@ export function Hero() {
                 <div className="mb-8 sm:mb-12 md:mb-16">
                     <TextReveal
                         text="Get your visa sorted,"
-                        className="font-serif text-3xl sm:text-4xl md:text-7xl lg:text-8xl italic leading-none block mb-2 md:mb-4 px-2 sm:px-4 md:px-0"
+                        className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl italic leading-none block mb-2 md:mb-4 px-2 sm:px-4 md:px-0"
                         delay={0.4}
                     />
                     <TextReveal
@@ -72,7 +72,7 @@ export function Hero() {
                     </p>
                 </FadeIn>
 
-                <FadeIn delay={1.0} yOffset={30} className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center mb-12 sm:mb-16 md:mb-24 px-2 sm:px-4 md:px-0 w-full">
+                <FadeIn delay={1.0} yOffset={30} className="flex flex-col sm:flex-row gap-2 md:gap-4 lg:gap-8 justify-center items-center mb-12 sm:mb-16 md:mb-24 px-2 sm:px-4 md:px-0 w-full">
                     <Button
                         data-tally-open="ZjoraV"
                         data-tally-layout="modal"
