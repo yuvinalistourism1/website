@@ -3,6 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { FileText } from "lucide-react";
+import { LegalStyles } from "@/components/LegalStyles";
 
 export const metadata: Metadata = {
     title: "Terms & Conditions | Yuvinalis Tourism",
@@ -46,81 +47,9 @@ export default function TermsPage() {
             <section className="py-24 px-4 container mx-auto max-w-4xl">
                 <FadeIn delay={0.2}>
                     <div className="bg-white rounded-3xl border border-brand-blue/5 shadow-sm p-8 md:p-16">
-                        <div className="space-y-8">
-                            <style jsx>{`
-                                h2 {
-                                    font-family: serif;
-                                    font-size: 3rem;
-                                    font-weight: 700;
-                                    color: #0D1B2A;
-                                    margin-top: 6rem;
-                                    margin-bottom: 2.5rem;
-                                    padding-bottom: 1.5rem;
-                                    border-bottom: 2px solid rgba(255, 193, 7, 0.4);
-                                }
-                                h2:first-of-type {
-                                    margin-top: 0;
-                                }
-                                h3 {
-                                    font-family: serif;
-                                    font-size: 1.5rem;
-                                    font-weight: 600;
-                                    color: rgba(30, 58, 95, 0.9);
-                                    margin-top: 3.5rem;
-                                    margin-bottom: 1.5rem;
-                                    padding: 0.75rem 1rem;
-                                    background: rgba(255, 193, 7, 0.05);
-                                    border-left: 4px solid #FFC107;
-                                    border-radius: 0.5rem;
-                                }
-                                p {
-                                    font-size: 1rem;
-                                    line-height: 1.9;
-                                    color: rgba(30, 58, 95, 0.8);
-                                    margin-bottom: 1.5rem;
-                                }
-                                p:first-of-type {
-                                    font-size: 0.875rem;
-                                    color: rgba(30, 58, 95, 0.6);
-                                    font-style: italic;
-                                    margin-bottom: 4rem;
-                                }
-                                ul, ol {
-                                    margin: 2rem 0;
-                                    padding: 1.5rem 1.5rem 1.5rem 3rem;
-                                    background: rgba(249, 250, 251, 0.5);
-                                    border: 1px solid rgba(30, 58, 95, 0.1);
-                                    border-radius: 0.75rem;
-                                }
-                                li {
-                                    font-size: 1rem;
-                                    line-height: 1.8;
-                                    color: rgba(30, 58, 95, 0.85);
-                                    margin: 1rem 0;
-                                }
-                                ul li::marker {
-                                    color: #FFC107;
-                                    font-size: 1.5rem;
-                                    font-weight: 700;
-                                }
-                                ol li::marker {
-                                    color: #FFC107;
-                                    font-weight: 700;
-                                }
-                                strong {
-                                    font-weight: 700;
-                                    color: #0D1B2A;
-                                }
-                                a {
-                                    color: #FFC107;
-                                    font-weight: 600;
-                                    text-decoration: none;
-                                }
-                                a:hover {
-                                    text-decoration: underline;
-                                }
-                            `}</style>
-                    <p>Last updated: December 27, 2025</p>
+                        <div className="space-y-8 legal-content">
+                            <LegalStyles />
+                            <p>Last updated: December 27, 2025</p>
                     
                     <p>Welcome to Yuvinalis Tourism. These terms and conditions outline the rules and regulations for the use of our Website and Services. By accessing this website and using our services, you accept these terms and conditions in full. Do not continue to use Yuvinalis Tourism's website if you do not accept all of the terms and conditions stated on this page.</p>
 
