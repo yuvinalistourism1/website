@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FadeIn } from "./animations/FadeIn";
 import { cn } from "@/lib/utils";
-import { Plane, Hotel, Map, Car, Building2, FileCheck, Briefcase } from "lucide-react";
+import { Plane, Hotel, Map, Car, Building2, FileCheck, Briefcase, Palmtree } from "lucide-react";
 
 const services = [
     {
@@ -17,6 +17,16 @@ const services = [
         description: "We assist with visa applications for popular destinations including the UAE, Schengen countries, China, Saudi Arabia, Qatar, Thailand, Georgia, and Azerbaijan. You'll receive a clear checklist, document guidance, and realistic timelines.",
         bullets: ["UAE (Tourist & Golden Visas)", "Schengen & UK", "China, Thailand & Asia"],
         image: "/images/Visa Services.png"
+    },
+    {
+        icon: Palmtree,
+        displayTitle: "Desert Safaris",
+        tagline: "Authentic Arabian Adventures",
+        subtitle: "Authentic Arabian Adventures",
+        title: "Desert Safaris",
+        description: "Experience the magic of the Arabian desert with our curated safari experiences. From thrilling dune bashing to serene sunset views, traditional Bedouin camps, and authentic cultural encounters including falconry displays.",
+        bullets: ["Dune Bashing Adventures", "Falcon Experience Shows", "Bedouin Camp Dinners"],
+        image: "/images/falcon-experience.png"
     },
     {
         icon: Plane,
