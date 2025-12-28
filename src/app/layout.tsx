@@ -72,6 +72,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`${mulish.variable} ${playfair.variable} font-sans text-brand-blue bg-brand-cream antialiased overflow-x-hidden`}
       >
         <script async src="https://tally.so/widgets/embed.js"></script>

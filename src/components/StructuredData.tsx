@@ -2,12 +2,20 @@ import Script from "next/script";
 
 interface StructuredDataProps {
     data: Record<string, any>;
+    id?: string;
 }
 
-export function StructuredData({ data }: StructuredDataProps) {
+export function StructuredData({ data, id }: StructuredDataProps) {
+    const stableId = id || `structured-data-${String(data["@type"] || "data")}-${String(
+        data.name || data.url || data["@id"] || "default"
+    )
+        .toLowerCase()
+        .replace(/[^a-z0-9_-]/g, "-")
+        .slice(0, 40)}`;
+
     return (
         <Script
-            id={`structured-data-${Math.random().toString(36).substr(2, 9)}`}
+            id={stableId}
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
         />

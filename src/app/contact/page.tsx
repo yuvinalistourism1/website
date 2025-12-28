@@ -41,8 +41,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <main className="min-h-screen bg-brand-cream font-sans antialiased text-brand-dark selection:bg-brand-gold selection:text-brand-blue">
-            <StructuredData data={dubaiOfficeSchema} />
-            <StructuredData data={nairobiOfficeSchema} />
+            <StructuredData id="structured-data-dubai-office" data={dubaiOfficeSchema} />
+            <StructuredData id="structured-data-nairobi-office" data={nairobiOfficeSchema} />
             <Navbar />
 
             <section className="pt-48 pb-24 bg-brand-dark text-white relative overflow-hidden">

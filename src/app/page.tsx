@@ -48,9 +48,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-brand-cream font-sans antialiased text-brand-dark selection:bg-brand-gold selection:text-brand-blue">
-      <StructuredData data={organizationSchema} />
-      <StructuredData data={faqSchema} />
-      <StructuredData data={aggregateRatingSchema} />
+      <StructuredData id="structured-data-organization" data={organizationSchema} />
+      <StructuredData id="structured-data-faq" data={faqSchema} />
+      <StructuredData id="structured-data-aggregate-rating" data={aggregateRatingSchema} />
       <Navbar />
       <Hero />
       <TrustBar />

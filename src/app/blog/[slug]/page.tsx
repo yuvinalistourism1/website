@@ -208,7 +208,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
     return (
         <main className="min-h-screen bg-brand-cream font-sans antialiased text-brand-dark">
-            <StructuredData data={blogSchema} />
+            <StructuredData id={`structured-data-blog-${slug}`} data={blogSchema} />
             <Navbar />
 
             <article>
