@@ -21,7 +21,7 @@ export const organizationSchema = {
     "name": "Yuvinalis Tourism",
     "alternateName": "Yuvinalis Excursions",
     "url": "https://yuvinalis.com",
-    "logo": "https://yuvinalis.com/logo.png",
+    "logo": "https://yuvinalis.com/images/Yuvinalis Tourism Logo Favicon.png",
     "image": "https://yuvinalis.com/images/new hero image.png",
     "description": "Professional visa services and luxury travel experiences in Dubai. We handle UAE, Schengen, China visas and more. Book desert safaris, yacht charters, and complete travel packages.",
     "telephone": "+971-4-295-2270",
@@ -274,7 +274,7 @@ export function generateBlogPostingSchema(post: {
             "name": "Yuvinalis Tourism",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://yuvinalis.com/logo.png"
+                "url": "https://yuvinalis.com/images/Yuvinalis Tourism Logo Favicon.png"
             }
         },
         "mainEntityOfPage": {

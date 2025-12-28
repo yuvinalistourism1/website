@@ -60,7 +60,7 @@ export function Navbar() {
                     <Link href="/" className="group flex items-center gap-2 md:gap-3">
                         <div className="relative w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0 rounded-full overflow-hidden border border-brand-gold/50 group-hover:border-brand-gold transition-colors">
                             <Image
-                                src="/logo.jpg"
+                                src="/images/Yuvinalis Tourism Logo Favicon.png"
                                 alt="Yuvinalis Tourism Logo"
                                 fill
                                 className="object-cover"

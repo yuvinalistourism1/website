@@ -31,14 +31,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Yuvinalis Tourism" }],
   icons: {
     icon: [
-      { url: '/logo.jpg' },
-      { url: '/logo.jpg', sizes: '32x32', type: 'image/jpeg' },
-      { url: '/logo.jpg', sizes: '16x16', type: 'image/jpeg' }
+      { url: '/images/Yuvinalis Tourism Logo Favicon.png' },
+      { url: '/images/Yuvinalis Tourism Logo Favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/Yuvinalis Tourism Logo Favicon.png', sizes: '16x16', type: 'image/png' }
     ],
     apple: [
-      { url: '/logo.jpg' }
+      { url: '/images/Yuvinalis Tourism Logo Favicon.png' }
     ],
-    shortcut: ['/logo.jpg']
+    shortcut: ['/images/Yuvinalis Tourism Logo Favicon.png']
   },
   openGraph: {
     type: "website",

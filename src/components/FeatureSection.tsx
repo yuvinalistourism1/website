@@ -37,7 +37,7 @@ export function FeatureSection() {
 
                         <div className="absolute -top-12 -left-12 p-8 bg-brand-blue text-white rounded-sm shadow-xl hidden lg:flex items-center gap-4">
                             <div className="relative w-12 h-12 shrink-0 overflow-hidden rounded-full border border-brand-gold/30">
-                                <Image src="/logo.jpg" alt="Logo" fill className="object-cover" />
+                                <Image src="/images/Yuvinalis Tourism Logo Favicon.png" alt="Logo" fill className="object-cover" />
                             </div>
                             <div>
                                 <p className="text-4xl font-serif italic mb-1 text-brand-gold leading-none">15+</p>

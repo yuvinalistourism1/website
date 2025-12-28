@@ -5,7 +5,6 @@ import Image from "next/image";
 import {
     Instagram,
     Facebook,
-    Youtube,
     Mail,
     Phone,
     MapPin,
@@ -35,7 +34,7 @@ export function Footer() {
                             <Link href="/" className="group inline-flex items-center gap-3 mb-6">
                                 <div className="relative w-14 h-14 overflow-hidden rounded-full border-2 border-brand-gold/30 group-hover:border-brand-gold transition-colors">
                                     <Image
-                                        src="/logo.jpg"
+                                        src="/images/Yuvinalis Tourism Logo Favicon.png"
                                         alt="Yuvinalis Tourism"
                                         fill
                                         className="object-cover"
@@ -56,7 +55,6 @@ export function Footer() {
                                     { Icon: Facebook, href: "https://www.facebook.com/yuvinalistourism", label: "Facebook" },
                                     { Icon: Instagram, href: "https://www.instagram.com/yuvinalistourism", label: "Instagram" },
                                     { Icon: TikTokIcon, href: "https://www.tiktok.com/@yuvinalistourism", label: "TikTok" },
-                                    { Icon: Youtube, href: "https://www.youtube.com/@Judyyuvinalis2024", label: "YouTube" },
                                     { Icon: ThreadsIcon, href: "https://www.threads.com/@yuvinalistourism", label: "Threads" },
                                     { Icon: XIcon, href: "https://x.com/YuvinalisT", label: "X" }
                                 ].map((social, i) => (
