@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import { FadeIn } from "./animations/FadeIn";
 import { TikTokIcon } from "./icons/TikTokIcon";
+import { ThreadsIcon } from "./icons/ThreadsIcon";
+import { XIcon } from "./icons/XIcon";
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
@@ -54,7 +56,9 @@ export function Footer() {
                                     { Icon: Facebook, href: "https://www.facebook.com/yuvinalistourism", label: "Facebook" },
                                     { Icon: Instagram, href: "https://www.instagram.com/yuvinalistourism", label: "Instagram" },
                                     { Icon: TikTokIcon, href: "https://www.tiktok.com/@yuvinalistourism", label: "TikTok" },
-                                    { Icon: Youtube, href: "https://www.youtube.com/@Judyyuvinalis2024", label: "YouTube" }
+                                    { Icon: Youtube, href: "https://www.youtube.com/@Judyyuvinalis2024", label: "YouTube" },
+                                    { Icon: ThreadsIcon, href: "https://www.threads.com/@yuvinalistourism", label: "Threads" },
+                                    { Icon: XIcon, href: "https://x.com/YuvinalisT", label: "X" }
                                 ].map((social, i) => (
                                     <Link
                                         key={i}

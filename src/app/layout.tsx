@@ -29,6 +29,17 @@ export const metadata: Metadata = {
   description: "Professional visa services and luxury travel experiences in Dubai. We handle UAE, Schengen, China visas and more. Book desert safaris, yacht charters, and complete travel packages.",
   keywords: "Dubai visa services, UAE visa application, Schengen visa Dubai, China visa Dubai, Dubai travel agency, luxury Dubai tours, desert safari Dubai, yacht charter Dubai",
   authors: [{ name: "Yuvinalis Tourism" }],
+  icons: {
+    icon: [
+      { url: '/logo.jpg' },
+      { url: '/logo.jpg', sizes: '32x32', type: 'image/jpeg' },
+      { url: '/logo.jpg', sizes: '16x16', type: 'image/jpeg' }
+    ],
+    apple: [
+      { url: '/logo.jpg' }
+    ],
+    shortcut: ['/logo.jpg']
+  },
   openGraph: {
     type: "website",
     url: "https://yuvinalis.com",
