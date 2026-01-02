@@ -14,7 +14,7 @@ const services = [
         tagline: "Expert Application Assistance",
         subtitle: "Expert Application Assistance",
         title: "Visas for Popular Destinations",
-        description: "We assist with visa applications for popular destinations including the UAE, Schengen countries, China, Saudi Arabia, Qatar, Thailand, Georgia, and Azerbaijan. You'll receive a clear checklist, document guidance, and realistic timelines.",
+        description: "We assist with visa applications for popular destinations including UAE, GCC countries (Saudi Arabia, Qatar, Oman, Kuwait, Bahrain), Thailand, China, Japan, Vietnam, South Africa, Indonesia, India, South Korea, Turkey, New Zealand, Australia, Europe (Schengen & UK), Canada, and USA. You'll receive a clear checklist, document guidance, and realistic timelines.",
         bullets: ["UAE (Tourist & Golden Visas)", "Schengen & UK", "China, Thailand & Asia"],
         image: "/images/Visa Services.png"
     },
@@ -134,8 +134,8 @@ export function ServicesSection() {
                                     >
                                         <div className={cn(
                                             "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 shrink-0",
-                                            isActive 
-                                                ? "bg-brand-gold text-brand-dark shadow-lg scale-110" 
+                                            isActive
+                                                ? "bg-brand-gold text-brand-dark shadow-lg scale-110"
                                                 : "bg-white/10 text-white group-hover:bg-brand-gold/30"
                                         )}>
                                             <service.icon className="w-5 h-5" />
